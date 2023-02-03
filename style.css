@@ -1,0 +1,140 @@
+.none {
+    display: none !important;
+}
+
+.none * {
+    display: none !important;
+}
+
+body {
+    background-color: #7209B7;
+}
+
+#contenant_conn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: rgba(1, 1, 1);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    height: 50px;
+    user-select: none;
+    width: 0px;
+    animation: ease-in 400ms 1 forwards slide;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contenant_conn p {
+    margin: 0px;
+    word-break: keep-all;
+    animation: ease-in 800ms 1 forwards apparait;
+}
+
+@keyframes slide {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 200px;
+    }
+}
+
+@keyframes apparait {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#contenant_conn::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50% ,-50%) rotate(45deg);
+    z-index: 2;
+    transition: 500ms;
+}
+
+#contenant_conn:hover::after {
+    left: 150%;
+}
+
+#contenant_conn::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50% ,-50%) rotate(45deg);
+    z-index: 2;
+    transition: 800ms;
+}
+
+#contenant_conn:hover::before {
+    left: 150%
+}
+
+
+
+#pseudo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: rgba(1, 1, 1);
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    height: 50px;
+}
+
+.test {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 400ms;
+}
+
+.test2 {
+    top: 60%;
+    transform: translate(-50%,-60%);
+}
+
+.mdp_ {
+    width: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: rgba(1, 1, 1);
+    height: 50px;
+    border-radius: 5px;
+}
+
+input {
+    border: none;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
