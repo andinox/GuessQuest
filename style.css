@@ -21,7 +21,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    height: 50px;
+    height: 60px;
     user-select: none;
     width: 0px;
     animation: ease-in 400ms 1 forwards slide;
@@ -29,8 +29,112 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
+
+.pseudo{
+    z-index: 7;
+    position: absolute;
+    padding: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    height: 60px;
+}
+
+
+
+.pseudo svg {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%,-50%);
+    transition: 1s;
+}
+
+.pseudo input {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(30px,-50%);
+    max-height: 60px;
+    font-size: large;
+    transition: 1s;
+}
+
+
+.pseudo.invi * {
+    opacity: 0;
+}
+
+.mdp svg {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%,-50%);
+}
+
+.mdp input {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(30px,-50%);
+    max-height: 60px;
+    font-size: large;
+}
+
+.mdp {
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 3;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    height: 60px;
+}
+
+
+.valide {
+    z-index: 2;
+    position: relative;
+    height: 60px;
+    background-color: #6CAF5B;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 5px;
+    width: 60px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+
+.validew {
+    transform: translateX(-200%);
+}
+
+.valide input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.valide svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+}
+
 
 #contenant_conn p {
     margin: 0px;
@@ -43,7 +147,7 @@ body {
         width: 0px;
     }
     100% {
-        width: 200px;
+        width: 300px;
     }
 }
 
@@ -93,27 +197,16 @@ body {
 
 
 
-#pseudo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
-    color: rgba(1, 1, 1);
-    border-radius: 5px;
-    width: 200px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    height: 50px;
-}
-
 .test {
-    width: 200px;
+    width: 300px;
+    height: 60px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: 400ms;
+    display: flex;
+    justify-content: space-between;
 }
 
 .test2 {
@@ -121,20 +214,24 @@ body {
     transform: translate(-50%,-60%);
 }
 
-.mdp_ {
-    width: 150px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
-    color: rgba(1, 1, 1);
-    height: 50px;
-    border-radius: 5px;
-}
 
 input {
+    padding: 0px;
     border: none;
 }
 
 input:focus {
     border: none;
     outline: none;
+}
+
+#2ndpart {
+    z-index: 6;
+}
+
+#logo {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-5%);
 }
