@@ -31,12 +31,13 @@ $blanc: #fff;
 body {
     background-color: $purple;
     overflow: hidden;
-    @include maxhw;
+    height: 100vh;
     @include flex(flex-start);
 }
 
 #logo {
     max-width: 500px;
+    margin-bottom: 45px;
     width: 80%;
 
     @media screen and (max-width: 1200px) {
