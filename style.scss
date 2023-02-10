@@ -161,7 +161,7 @@ body {
     @include flex(space-between);
     flex-direction: row;
     margin-top: 25px;    
-    transition: 1s;
+    transition: 500ms;
     transform: translateY(-140%) scale(0.9);
 
     .mdp {
@@ -196,7 +196,7 @@ body {
     }
 
     &.apparaitre {
-        transition: 1s;
+        transition: 500ms;
         transform: translateY(0%) scale(1);
     }
 }

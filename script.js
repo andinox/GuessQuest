@@ -15,7 +15,7 @@ document.getElementById("contenant_conn").addEventListener("click", async () => 
     document.getElementById("pseudonim").classList.add("apparaitre");
     await sleep(600);
     document.getElementById("2ndpart").classList.remove("none");
-    await sleep(200);
+    await sleep(50);
     document.getElementById("2ndpart").classList.add("apparaitre");
     await sleep(700);
     document.getElementById("btn-submit").classList.add("apparaitre")

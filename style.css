@@ -133,7 +133,7 @@ body {
   flex-direction: column;
   flex-direction: row;
   margin-top: 25px;
-  transition: 1s;
+  transition: 500ms;
   transform: translateY(-140%) scale(0.9);
 }
 .secondpart .mdp {
@@ -168,7 +168,7 @@ body {
   transform: translateX(0%);
 }
 .secondpart.apparaitre {
-  transition: 1s;
+  transition: 500ms;
   transform: translateY(0%) scale(1);
 }
 
