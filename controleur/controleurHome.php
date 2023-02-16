@@ -1,12 +1,11 @@
 <?php
 
-class ControleurAccueil {
+class ControleurHome {
 
-    public static function afficheAccueil() {
+    public static function afficheHome() {
         $titre = "Home";
         include ("vue/debut.php");
-    
-        include ("vue/home.html");
+        include ("vue/home.php");
         include ("vue/footer.html");
     }
 }
