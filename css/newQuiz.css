@@ -86,7 +86,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 }
 
 .bi-palette {
-    color: #8b4cf8;
+    color: black;
 }
 
 .name-q {
@@ -100,7 +100,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 .input-n {
     background: none;
     border: none;
-    filter: invert(1);
     font-size: 200%;
     font-family: Raleway;
     color: white;
@@ -154,8 +153,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 }
 
 #img-svg {
-    color:#8b4cf8
-}
+    color:black}
 
 
 .q-list {
@@ -163,45 +161,24 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
     overflow-y: scroll;
     position: absolute;
     top:40%;
-    max-height: 60%;
-    display: flex;
-    align-items:center;
-    justify-content: flex-end;
-    flex-direction: column-reverse;
+    height: 60%;
+    display: inline-block;
 }
 .q-list > * {
-    margin-top: 15px;
+    margin: 0 auto;
 }
 
 
-#add-q {
-    margin-bottom: 15px;
-}
+.q-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Cache la barre de défilement verticale */
+  .q-list::-webkit-scrollbar-vertical {
+    display: none;
+  }
 
-#add-q {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    /*box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;*/
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-}
 
-#add-q *{
-    font-family: Raleway;
-    font-size: 150%;
-}
-
-#add-q .bi {
-    font-size: 200%;
-}
-
-#add-q:hover {
-    cursor: pointer;
-}
 
 
 .q-div-btn {
@@ -215,6 +192,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
 }
 
 
@@ -284,7 +263,46 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 
 
 
+#add-q {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
 
+#add-q {    
+    z-index: 9999;
+    background-color: white;
+    left: 50%;
+    position: absolute;
+    height: 50px;
+    transform: translate(-50%, -5%);
+    bottom: 5%;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    /*box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;*/
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+#add-q *{
+    font-family: Raleway;
+    font-size: 150%;
+}
+
+#add-q .bi {
+    font-size: 200%;
+}
+
+#add-q:hover {
+    cursor: pointer;
+}
+
+.choised {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 
 .none {
     display: none;
