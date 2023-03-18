@@ -9,10 +9,11 @@ class Utilisateur extends Model{
 
 
     //check Utilisateur password
-    public static function checkMDP($m) {
-		$requetePreparee = "SELECT * FROM Utilisateur WHERE mdp = :m_tag;";
+    public static function checkMDP($p,$m) {
+		$requetePreparee = "SELECT * FROM Utilisateur WHERE pseudo = :p_tag and mdp = :m_tag;";
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
 		$valeurs = array(
+            "p_tag"=> $p,
 			"m_tag" => $m
 		);
 
