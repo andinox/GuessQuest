@@ -1,4 +1,6 @@
 <?php 
+require_once ("./model/model.php");
+require_once ("./model/utilisateur.php");
 
 class ControleurNewQuiz {
 

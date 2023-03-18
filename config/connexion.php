@@ -3,8 +3,8 @@ class Connexion {
   // les attributs static caractéristiques de la connexion
   static private $hostname = "localhost";//"projets.iut-orsay.fr";
   static private $database = "prj-s4-guestquest";
-  static private $login = "prj-s4-guestquest";
-  static private $password = "LFHVaNViNAOOwMaf";
+  static private $login = "root";
+  static private $password = "";
 
   static private $tabUTF8 = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 
