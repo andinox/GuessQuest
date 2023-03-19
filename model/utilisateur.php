@@ -44,6 +44,12 @@ class Utilisateur extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':mdp' => $mdp));
     }
+
+
+    public static function ajouteQuizz($id_utilisateur){
+
+
+    }
 }
 
 ?>

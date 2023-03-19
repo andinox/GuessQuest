@@ -23,7 +23,7 @@ add_q = (event) => {
   nb_question++;
   var question_list = $("#q-list");
   var unknow_q = $("#template").clone(true);
-  unknow_q.children().eq(1).css("backgroundColor", getRandomHexColor());
+  unknow_q.children().eq(0).css("backgroundColor", getRandomHexColor());
   unknow_q.removeClass("none");
   unknow_q.on("click", (event) => {
       console.log(event.target);

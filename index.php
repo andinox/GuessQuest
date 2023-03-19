@@ -8,10 +8,9 @@ if (isset($_GET["c"])) {
             break;
     }
 } else {
-    
-        
+          
     include("./vue/debut.php");
-    echo "<a href='?c=newquiz'>new Quiz</a>";  
+    echo "<a href='?c=newquiz'>new Quiz</a>"; 
     include("./vue/footer.html");  
 }
 
