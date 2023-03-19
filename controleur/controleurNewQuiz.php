@@ -9,7 +9,7 @@ class ControleurNewQuiz {
         $login = "Andinox";
         $mdp = "azerty";
         $b = Utilisateur::checkMDP($login, $mdp);
-        $q = issets($_GET["quiz"]);
+        $q = isset($_GET["quiz"]);
 
         if ($b && $q) {
             $quizID = $_GET["quiz"];
