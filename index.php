@@ -23,5 +23,5 @@ if (isset($_GET["c"])) {
     echo"<a href='?c=home'>home</a>";
     include("./vue/footer.html");  
 }
-
+/*Test de GITHUB de Manaïa*/
 ?>
