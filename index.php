@@ -14,6 +14,10 @@ if (isset($_GET["c"])) {
             require_once("./controleur/controleurHome.php");
             controleurHome::afficheHome();
             break;
+        case "profil":
+            require_once("./controleur/controleurProfil.php");
+            controleurProfil::affiche();
+            break;
     }
 } else {
           
@@ -21,7 +25,6 @@ if (isset($_GET["c"])) {
     echo "<a href='?c=newquiz'>new Quiz</a>"; 
     echo"<a href='?c=connexion'>connexion</a>";
     echo"<a href='?c=home'>home</a>";
-    include("./vue/footer.html");  
+    include("./vue/footer.html");
 }
-/*Test de GITHUB de Manaïa*/
 ?>

@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profil{
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#profil-background{
+    width: 500px;
+    height: 250px;
+    position: relative;
+    background-image: url("../img/backgroundProfil.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#profil-img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url("../img/profil.png");
+    background-size: cover;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50px, 50px);
+}
+
+#profil-info{
+    height: 200px;
+}
+
+#liste{
+    margin-top: 50px;
+    list-style: none;
+}
