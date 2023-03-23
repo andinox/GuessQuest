@@ -46,6 +46,15 @@ class Utilisateur extends Model{
     }
 
 
+        //get id_Utilisateur by pseudo
+        public static function getId_UtilisateurByPseudo($pseudo) {
+            $sql = "SELECT id_Utilisateur FROM Utilisateur WHERE pseudo = :pseudo";
+            $req = Connexion::pdo()->prepare($sql);
+            $req->execute(array(':pseudo' => $pseudo));
+            $tab = $req->fetchAll();
+            return $tab[0][0];
+        }
+
     public static function ajouteQuizz($id_utilisateur){
 
 

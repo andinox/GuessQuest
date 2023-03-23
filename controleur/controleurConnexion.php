@@ -7,7 +7,8 @@ require_once ("../model/utilisateur.php");
 class controleurConnexion {
     public static function afficheConnexion() {
         $titre = "Connexion";
-        include ("../page_connexion/index.html");
+        include("../vue/debut.php");
+        include ("../vue/connexion_invite/connexionInvite.html");
     }
 
     public static function connecterUtilisateur(){
