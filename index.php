@@ -19,6 +19,18 @@ if (isset($_GET["c"])) {
             require_once("./controleur/controleurProfil.php");
             controleurProfil::affiche();
             break;
+        case "invite":
+            require_once("./controleur/controleurInvite.php");
+            controleurInvite::afficheInvite();
+            break;
+        case "creationCompte":
+            require_once("./controleur/controleurCreationCompte.php");
+            controleurCreationCompte::afficheCreationCompte();
+            break;
+        case "modifMdp":
+            require_once("./controleur/controleurModifMdp.php");
+            controleurModifMdp::afficheModifMdp();
+            break;
     }
 } else {
           
