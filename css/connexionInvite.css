@@ -21,6 +21,11 @@ h2{
     font-size: 19px;
 }
 
+#particles-js {
+    width: 100vw;
+    height: 100vh;
+}
+
 .container {
     max-width: 500px;
     margin: 0 auto;

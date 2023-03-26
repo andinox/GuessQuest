@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 if (isset($_GET["c"])) {
     switch($_GET["c"]) {
@@ -23,6 +24,22 @@ if (isset($_GET["c"])) {
                 controleurRecuperationMdp::afficheRecuperationMdp();
                 break;
                         
+        case "profil":
+            require_once("./controleur/controleurProfil.php");
+            controleurProfil::affiche();
+            break;
+        case "invite":
+            require_once("./controleur/controleurInvite.php");
+            controleurInvite::afficheInvite();
+            break;
+        case "creationCompte":
+            require_once("./controleur/controleurCreationCompte.php");
+            controleurCreationCompte::afficheCreationCompte();
+            break;
+        case "modifMdp":
+            require_once("./controleur/controleurModifMdp.php");
+            controleurModifMdp::afficheModifMdp();
+            break;
     }
 } else {
           
@@ -33,6 +50,6 @@ if (isset($_GET["c"])) {
     echo"<a href='?c=contact'>contact</a>";
     echo"<a href='?c=recuperation_mdp'>recuperation_mdp</a>";
     include("./vue/footer.html");  
+    include("./vue/footer.html");
 }
-/*Test de GITHUB de Manaïa*/
 ?>
