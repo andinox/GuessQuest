@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+//d
 if (isset($_GET["c"])) {
     switch($_GET["c"]) {
         case "newquiz":
