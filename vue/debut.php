@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/modifierMdp.css">
     <link rel="stylesheet" href="./css/navBar.css">
     <link rel="stylesheet" href="./css/profil.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/recuperation_mdp.css">  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
