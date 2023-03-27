@@ -40,6 +40,11 @@ if (isset($_GET["c"])) {
             require_once("./controleur/controleurModifMdp.php");
             controleurModifMdp::afficheModifMdp();
             break;
+        case "connectionTest":
+            require_once("./controleur/controleurConnectionTest.php");
+            controleurConnexionTest::afficheConnexionTest();
+            break;
+        default:
     }
 } else {
           
@@ -49,6 +54,7 @@ if (isset($_GET["c"])) {
     echo"<a href='?c=home'>home</a>";
     echo"<a href='?c=contact'>contact</a>";
     echo"<a href='?c=recuperation_mdp'>recuperation_mdp</a>";
+    echo"<a href='?c=connectionTest'>coTest</a>";
     include("./vue/footer.html");  
     include("./vue/footer.html");
 }
