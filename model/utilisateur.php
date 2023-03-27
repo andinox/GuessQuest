@@ -1,6 +1,4 @@
 <?php 
-
-require_once ("./config/connexion.php");
 class Utilisateur extends Model{
     protected $id_utilisateur;
     protected $pseudo;

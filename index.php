@@ -41,7 +41,7 @@ if (isset($_GET["c"])) {
             controleurModifMdp::afficheModifMdp();
             break;
         case "connectionTest":
-            require_once("./controleur/controleurConnectionTest.php");
+            require_once("./controleur/controlerConnexionTest.php");
             controleurConnexionTest::afficheConnexionTest();
             break;
         default:

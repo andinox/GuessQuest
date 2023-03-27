@@ -1,14 +1,14 @@
 <?php
 
-require_once ("../model/model.php");
-require_once ("../model/utilisateur.php");
+require_once ("./model/model.php");
+require_once ("./model/utilisateur.php");
 
 
 class controleurConnexionTest {
     public static function afficheConnexionTest() {
         $titre = "ConnexionTest";
-        include("../vue/debut.php");
-        include ("../vue/connexionTest.html");
+        include("./vue/debut.php");
+        include ("./vue/connexionTest.html");
     }
 
     public static function connecterUtilisateur(){

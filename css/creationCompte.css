@@ -1,12 +1,3 @@
-body {
-    background: linear-gradient(33deg, #A16BFE, #BC3D2F);
-    font-family: Arial, sans-serif;
-    color: #332940;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    margin-top: 5vh;
-}
 
 .container {
     max-width: 500px;
