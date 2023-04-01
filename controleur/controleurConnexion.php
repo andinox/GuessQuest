@@ -18,7 +18,7 @@ class controleurConnexion {
 
         if($b){
             $_SESSION["login"] = $_POST["login"];
-            header("Location: index.php?controleur=controleurAccueil&action=afficheAccueil");//afficher notre Accueil
+            header("Location: index.php?controleur=controleurNewQuiz&action=affiche");//afficher notre Accueil
         } else{
             self::afficheConnexion();
         }
@@ -28,6 +28,6 @@ class controleurConnexion {
         session_unset();
         session_destroy();
         setcookie(session_name(), '', time()-1);
-        header("Location: index.php?controleur=controleurAccueil&action=afficheAccueil");//afficher accueil mais deco
+        header("Location: index.php?controleur=controleurConnexion&action=afficheConnexion");//afficher accueil mais deco
     }
 }
