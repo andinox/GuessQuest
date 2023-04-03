@@ -56,14 +56,12 @@ class Utilisateur extends Model{
         }
 
     public static function ajouteQuizz($id_utilisateur){
-        echo "<p>test </p>";
+        $sql = "SELECT id_Utilisateur FROM Utilisateur WHERE pseudo = :pseudo";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':pseudo' => $pseudo));
+        $tab = $req->fetchAll();
+        return $tab[0][0];
     }
 }
 
 ?>
-
-/*
-INSERT INTO `quiz` (`id_Quiz`, `titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) 
-VALUES ('', 'NouveauQuiz', '2023-04-04', '0', 'color(15)', NULL, NULL, '1', '1');
-
-*/
