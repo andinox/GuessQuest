@@ -1,4 +1,7 @@
 <?php 
+
+require_once ("./config/connexion.php");
+Connexion::connect();
 session_start();
 //d
 if (isset($_GET["c"])) {
@@ -15,15 +18,14 @@ if (isset($_GET["c"])) {
             require_once("./controleur/controleurHome.php");
             controleurHome::afficheHome();
             break;
-            case "contact":
-                require_once("./controleur/controleurContact.php");
-                controleurContact::afficheContact();
-                break;
-            case "recuperation_mdp":
-                require_once("./controleur/controleurRecuperationMdp.php");
-                controleurRecuperationMdp::afficheRecuperationMdp();
-                break;
-                        
+        case "contact":
+            require_once("./controleur/controleurContact.php");
+            controleurContact::afficheContact();
+            break;
+        case "recuperation_mdp":
+            require_once("./controleur/controleurRecuperationMdp.php");
+            controleurRecuperationMdp::afficheRecuperationMdp();
+            break;
         case "profil":
             require_once("./controleur/controleurProfil.php");
             controleurProfil::affiche();
@@ -49,6 +51,7 @@ if (isset($_GET["c"])) {
 } else {
           
     include("./vue/debut.php");
+    echo "<style> body { display: flex;flex-direction: column;} </style>";
     echo "<a href='?c=newquiz'>new Quiz</a>"; 
     echo"<a href='?c=connexion'>connexion</a>";
     echo"<a href='?c=home'>home</a>";
