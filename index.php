@@ -64,6 +64,5 @@ if (isset($_GET["c"])) {
     echo"<a href='?c=recuperation_mdp'>recuperation_mdp</a>";
     echo"<a href='?c=connectionTest'>coTest</a>";
     include("./vue/footer.html");  
-    include("./vue/footer.html");
 }
 ?>
