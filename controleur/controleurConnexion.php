@@ -28,10 +28,6 @@ class controleurConnexion {
         session_unset();
         session_destroy();
         setcookie(session_name(), '', time()-1);
-<<<<<<< Updated upstream
-        header("Location: index.php?controleur=controleurConnexion&action=afficheConnexion");//afficher accueil mais deco
-=======
         header("Location: index.php?controleur=controleurAccueil&action=affiche");//afficher accueil mais deco
->>>>>>> Stashed changes
     }
 }
