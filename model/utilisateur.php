@@ -56,9 +56,14 @@ class Utilisateur extends Model{
         }
 
     public static function ajouteQuizz($id_utilisateur){
-
-
+        echo "<p>test </p>";
     }
 }
 
 ?>
+
+/*
+INSERT INTO `quiz` (`id_Quiz`, `titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) 
+VALUES ('', 'NouveauQuiz', '2023-04-04', '0', 'color(15)', NULL, NULL, '1', '1');
+
+*/

@@ -30,7 +30,9 @@ class controleurConnexion {
         session_destroy();
         setcookie(session_name(), '', time()-1);
 
+
         header("Location: index.php?controleur=controleurConnexion&action=afficheConnexion");//afficher accueil mais deco
+
 
     }
 }
