@@ -13,15 +13,13 @@ class controleurConnexion {
     }
 
     public static function connecterUtilisateur(){
-        $login = $_POST["login"];
+        $login = $_POST["pseudo"];
         $mdp = $_POST["mdp"];
         $b = Utilisateur::checkMDP($login, $mdp);
 
         if($b){
             $_SESSION["login"] = $_POST["login"];
             header("Location: index.php?c=newquiz");//afficher notre Accueil
-        } else{
-            self::afficheConnexion();
         }
     }
 

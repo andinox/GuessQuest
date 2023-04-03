@@ -13,6 +13,11 @@ if (isset($_GET["c"])) {
         case "connexion":
             require_once("./controleur/controleurConnexion.php");
             controleurConnexion::afficheConnexion();
+            if (isset($_GET["action"])) {
+                if ($_GET["action"] == "check") {
+                    controleurConnexion::connecterUtilisateur();
+                }
+            }
             break;
         case "home":
             require_once("./controleur/controleurHome.php");

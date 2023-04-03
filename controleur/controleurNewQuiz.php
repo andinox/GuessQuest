@@ -15,7 +15,7 @@ class ControleurNewQuiz {
         if ($b && $q) {
             $quizID = $_GET["quiz"];
         } elseif ($b) {
-            $u = Utilisateur::ajouteQuizz($login);
+            $u = Utilisateur::ajouteQuizz(0);
 
         }
 
