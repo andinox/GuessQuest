@@ -19,7 +19,7 @@ class controleurConnexion {
 
         if($b){
             $_SESSION["login"] = $_POST["login"];
-            header("Location: index.php?controleur=controleurNewQuiz&action=affiche");//afficher notre Accueil
+            header("Location: index.php?c=newquiz");//afficher notre Accueil
         } else{
             self::afficheConnexion();
         }
