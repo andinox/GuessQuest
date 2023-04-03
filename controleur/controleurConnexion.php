@@ -8,7 +8,7 @@ class controleurConnexion {
     public static function afficheConnexion() {
         $titre = "Connexion";
         include("./vue/debut.php");
-        include ("./vue/connexion_invite/connexionInvite.html");
+        include ("./vue/connexionTest.html");
         include("./vue/footer.html");
     }
 
