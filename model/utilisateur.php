@@ -35,7 +35,7 @@ class Utilisateur extends Model{
         $req->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
         $req->execute(array(':id_utilisateur' => $id_utilisateur));
         $tab = $req->fetchAll();
-        return $tab;
+        return $tab[0];
     }
 
     //update mot de passe de l'utilisateur
@@ -46,14 +46,14 @@ class Utilisateur extends Model{
     }
 
 
-        //get id_Utilisateur by pseudo
-        public static function getId_UtilisateurByPseudo($pseudo) {
-            $sql = "SELECT id_Utilisateur FROM Utilisateur WHERE pseudo = :pseudo";
-            $req = Connexion::pdo()->prepare($sql);
-            $req->execute(array(':pseudo' => $pseudo));
-            $tab = $req->fetchAll();
-            return $tab[0][0];
-        }
+    //get id_Utilisateur by pseudo
+    public static function getId_UtilisateurByPseudo($pseudo) {
+        $sql = "SELECT id_Utilisateur FROM Utilisateur WHERE pseudo = :pseudo";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':pseudo' => $pseudo));
+        $tab = $req->fetchAll();
+        return $tab[0][0];
+    }
 
     public static function ajouteQuizz($id_utilisateur){
         $sql = "INSERT INTO `quiz` (`id_Quiz`, `titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) VALUES ('', 'NouveauQuiz', :Date, '0', '', NULL, NULL, '1', '1')";

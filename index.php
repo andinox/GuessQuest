@@ -33,7 +33,7 @@ if (isset($_GET["c"])) {
             break;
         case "profil":
             require_once("./controleur/controleurProfil.php");
-            controleurProfil::affiche();
+            controleurProfil::afficheProfil();
             break;
         case "invite":
             require_once("./controleur/controleurInvite.php");
