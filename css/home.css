@@ -1,3 +1,7 @@
+.home{
+  position: relative;
+  min-height: 100vh;
+}
 
 .card-home {
   width: 100vh;
@@ -51,10 +55,6 @@
   font-weight: bold;
  }
  
- /*Hover*/
- .card-home:hover {
-
- }
  
  .card-home:hover .card-button {
   background-color: #A16BFE;
