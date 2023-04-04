@@ -1,7 +1,15 @@
 <?php
-session_start();
-<<<<<<< Updated upstream
-//d
+require_once ("./config/connexion.php");
+
+require_once ("controleur/controleurUtilisateur.php");
+Connexion::connect();
+if (controleurUtilisateur::sessionUtilisateur() != null) {
+    $utilsateur = controleurUtilisateur::sessionUtilisateur();
+    echo "<p>{$utilsateur}</p>";
+} else {
+    echo "<p>non connecter</p>";
+}
+
 if (isset($_GET["c"])) {
     switch($_GET["c"]) {
         case "newquiz":
@@ -63,7 +71,5 @@ if (isset($_GET["c"])) {
     echo"<a href='?c=connectionTest'>coTest</a>";
     include("./vue/footer.html");  
 }
-=======
-require_once("./controleur/router.php");
->>>>>>> Stashed changes
+
 ?>

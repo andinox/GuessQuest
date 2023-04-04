@@ -19,7 +19,7 @@ class controleurConnexion {
 
         if($b){
             $_SESSION["pseudo"] = $_POST["pseudo"];
-            header("Location: index.php?c=newquiz");//afficher notre Accueil
+            header("Location: index.php");//afficher notre Accueil
         }
     }
 
