@@ -41,7 +41,7 @@ if (isset($_GET["c"])) {
             break;
         case "profil":
             require_once("./controleur/controleurProfil.php");
-            //controleurProfil::affiche();
+            controleurProfil::afficheProfil();
             break;
         case "invite":
             require_once("./controleur/controleurInvite.php");
@@ -65,6 +65,7 @@ if (isset($_GET["c"])) {
           
     include("./vue/debut.php");
     echo "<style> body { display: flex;flex-direction: column;} </style>";
+    echo"<a href='?c=profil'>Profil</a>";
     echo "<a href='?c=newquiz'>new Quiz</a>"; 
     echo"<a href='?c=connexion'>connexion</a>";
     echo"<a href='?c=home'>home</a>";
