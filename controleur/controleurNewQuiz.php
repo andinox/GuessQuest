@@ -2,11 +2,17 @@
 
 require_once ("model/model.php");
 require_once ("model/utilisateur.php");
-
+require_once ("controleur/controleurUtilisateur.php");
 class ControleurNewQuiz {
 
-    public static function affiche() {;
 
+    public static function affiche() {
+        if (controleurUtilisateur::sessionUtilisateur() != null) {
+            $utilsateur = controleurUtilisateur::sessionUtilisateur();
+            echo "<p>{$utilsateur}</p>";
+        } else {
+            echo "<p>non connecter</p>";
+        }
         $login = "Andinox";
         $mdp = "azerty";
         $b = Utilisateur::checkMDP($login, $mdp);
