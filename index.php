@@ -3,7 +3,7 @@
 require_once ("./config/connexion.php");
 Connexion::connect();
 session_start();
-//d
+
 if (isset($_GET["c"])) {
     switch($_GET["c"]) {
         case "newquiz":

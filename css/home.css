@@ -1,100 +1,15 @@
-.home{
-  position: relative;
-  min-height: 100vh;
+.home-accueil{
+  margin-top: 3vh;
+  margin-left: 3vh;
 }
 
-.card-home {
-  width: 100vh;
-  height: 254px;
-  border-radius: 20px;
-  background: #f5f5f5;
-  position: relative;
-  padding: 1.8rem;
-  border: 2px solid #c3c6ce;
-  transition: 0.5s ease-out;
-  margin: 0 auto;
-  margin-top: 10vh;
-  overflow: visible;
-  border-color: #008bf8;
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
- }
- 
- .card-details {
-  color: black;
-  height: 100%;
-  gap: .5em;
-  display: grid;
-  place-content: center;
- }
- 
- .card-button {
-  transform: translate(-50%, 125%);
-  width: 20%;
-  border-radius: 1rem;
-  border: none;
-  background-color: #008bf8;
-  color: #fff;
-  font-size: 1rem;
-  padding: .5rem 1rem;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  opacity: 0;
-  transition: 0.3s ease-out;
-  transform: translate(-50%, 50%);
-  opacity: 1;
- }
- 
- .text-body {
-  color: black;
- }
- 
- /*Text*/
- .text-title {
-  font-size: 2.5em;
-  font-weight: bold;
- }
- 
- 
- .card-home:hover .card-button {
-  background-color: #A16BFE;
- }
+.titre-home{
+  font-size: 55px;
+  margin-bottom: 2vh;
+}
 
- .footer-home{
-  display: block;
-  margin: auto;
-  background-color: #222020;
-  position: absolute;
-  bottom: 0;
-  height: auto;
-  width: 100%;
- }
+.text-titre-home {
+  max-width: 50%;
+}
 
- .stack-quatre{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
- }
 
- .item-footer-home{
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  margin-left: 22%;
-  margin-bottom: 6vh;
- }
-
- .image-container-home{
-  text-align: center;
-  display: block;
- }
-
- .texte-container-home{
-  width: 50vh;
- }
-
- .footer-home-texte{
-  color: white;
-  padding-top: 2vh;
- }
