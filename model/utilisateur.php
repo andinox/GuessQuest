@@ -35,7 +35,7 @@ class Utilisateur extends Model{
         $req->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
         $req->execute(array(':id_utilisateur' => $id_utilisateur));
         $tab = $req->fetchAll();
-        return $tab;
+        return $tab[0];
     }
 
     //update mot de passe de l'utilisateur
