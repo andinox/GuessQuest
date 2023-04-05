@@ -28,6 +28,8 @@ class Utilisateur extends Model{
         }
 	}
 
+
+
     //utilisateur by numUtilisateur
     public static function getUtilisateurByNum($id_utilisateur) {
         $sql = "SELECT * FROM Utilisateur WHERE id_utilisateur = :id_utilisateur";

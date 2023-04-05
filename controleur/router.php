@@ -71,6 +71,7 @@ if (isset($_GET["c"])) {
     echo"<a href='?c=home'>home</a>";
     echo"<a href='?c=contact'>contact</a>";
     echo"<a href='?c=recuperation_mdp'>recuperation_mdp</a>";
+    echo"<a href='?c=creationCompte'>création compte</a>";
     echo"<a href='?c=connectionTest'>coTest</a>";
     include("./vue/footer.html");  
 }
