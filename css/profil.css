@@ -13,6 +13,7 @@
     display: flex;
 }
 
+<<<<<<< Updated upstream
 #mainProfil{
     display: flex;
     justify-content: center;
@@ -20,6 +21,9 @@
 }
 
 #imgProfil{
+=======
+#donneUnNom {
+>>>>>>> Stashed changes
     position: absolute;
     width: 100px;
     height: 100px;

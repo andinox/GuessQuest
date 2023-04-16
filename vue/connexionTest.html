@@ -1,11 +1,33 @@
-<div class="container">
-    <form action="index.php?c=connexion&action=check" method="post">
-    <h2>Connection ?</h2>
-    <label for="login">Login :</label>
-    <input type="text" id="pseudo" name="pseudo" required>
-    <label for="mdp">Mdp :</label>
-    <input type="text" id="mpd" name="mdp" required>
-    <br><br>
-    <button type="submit">Valider</button>
-  </form>
+<div id="particles-js"></div>
+<div>
+  <img class="logo" src="./img/logo.png" alt="">
+</div>
+<div class="btn-c">
+  <p>Se Connecter</p>
+</div>
+<div class="btn-i">
+  <p>Invité</p>
+</div>
+<div class="name-i none">
+  <i class="bi bi-person"></i>
+  <div>
+    <input id="name-c" type="text" placeholder="Votre pseudo">
   </div>
+</div>
+<div class="pass-i none">
+  <i class="bi bi-lock"></i>
+  <div>
+    <input id="mdp-c" type="password" placeholder="Mot de passe">
+  </div>
+</div>
+<div class="valide none">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+<script src="./js/anime.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="./js/connexion.js"></script>
+<script src="./assets/particles.js"></script>
+<script src="./assets/app.js"></script>
