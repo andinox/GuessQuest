@@ -3,7 +3,7 @@
 require_once ("model/model.php");
 require_once ("model/utilisateur.php");
 require_once ("controleur/controleurUtilisateur.php");
-class ControleurNewQuiz {
+class controleurNewQuiz {
 
 
     public static function affiche() {

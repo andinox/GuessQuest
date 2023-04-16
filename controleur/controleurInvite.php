@@ -1,6 +1,6 @@
 <?php
 
-class ControleurInvite {
+class controleurInvite {
 
     public static function afficheInvite() {
         $titre = "Invité";
