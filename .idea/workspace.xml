@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ce9631b8-8a1d-4013-816a-dc7beebc6279" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api/checkmdp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/controleurMain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/anime.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/connexion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controlerConnexionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurConnexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurContact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurCreationCompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurCreationCompte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurHome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurInvite.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurInvite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurModifMdp.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurModifMdp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurNewQuiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurNewQuiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurProfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurProfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurRecuperationMdp.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurRecuperationMdp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurUtilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurUtilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/connexionInvite.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/connexionInvite.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/creationCompte.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/modifierMdp.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/profil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/logo projet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/connexionTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue/connexionTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/connexion_invite/connexionInvite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/debut.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/debut.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OTaQtIXfxFKgVcNnKXXQqdrpdh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/nclsr/Music/carboneiut-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\GuessQuest\js" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce9631b8-8a1d-4013-816a-dc7beebc6279" name="Changes" comment="" />
+      <created>1681587013467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681587013467</updated>
+      <workItem from="1681587014268" duration="34000" />
+      <workItem from="1681587054988" duration="17093000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
