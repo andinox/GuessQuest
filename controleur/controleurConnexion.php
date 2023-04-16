@@ -19,7 +19,6 @@ class controleurConnexion {
     public static function connecterUtilisateur(){
         $pseudo = $_POST["pseudo"];
         $mdp = $_POST["mdp"];
-        echo "<p> {$pseudo},{$mdp} </p>";
         $b = Utilisateur::checkMDP($pseudo, $mdp);
 
         if($b){
@@ -27,7 +26,6 @@ class controleurConnexion {
             header("Location: index.php?controleur=controleurMain");//afficher notre Accueil
         } else {
             self::afficheConnexion();
-            echo "failed";
         }
     }
 
