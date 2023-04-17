@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9631b8-8a1d-4013-816a-dc7beebc6279" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurMain.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/debut.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/debut.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/main/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue/main/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +74,7 @@
       <workItem from="1681638188313" duration="3405000" />
       <workItem from="1681666899576" duration="5778000" />
       <workItem from="1681717076597" duration="10821000" />
+      <workItem from="1681737015719" duration="3433000" />
     </task>
     <servers />
   </component>

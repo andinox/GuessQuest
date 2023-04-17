@@ -41,7 +41,7 @@ class Utilisateur extends Model{
     }
 
     //update mot de passe de l'utilisateur
-    public static function updateMdp ($id_utilisateur, $mdp) {
+    public static function updateMdp($id_utilisateur, $mdp) {
         $sql = "UPDATE Utilisateur SET mdp = :mdp WHERE id_utilisateur = :id_utilisateur";
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':mdp' => $mdp));
@@ -55,6 +55,14 @@ class Utilisateur extends Model{
         $req->execute(array(':pseudo' => $pseudo));
         $tab = $req->fetchAll();
         return $tab[0][0];
+    }
+
+    public static function getImgProfil($id_utilisateur) {
+        $sql = "SELECT image FROM Utilisateur WHERE id_utilisateur = :id_utilisateur";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':id_utilisateur' => $id_utilisateur));
+        $tab = $req->fetchAll();
+        return $tab[0]["image"];
     }
 
     public static function ajouteQuizz($id_utilisateur){
