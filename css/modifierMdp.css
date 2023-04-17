@@ -1,38 +1,39 @@
-
 .container {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
     padding-top: 50px;
-    overflow: auto;
-
 }
 
-.form_creeCompte {
+.formModifMdp {
     background-color: #fff;
     border-radius: 10px;
     padding: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.textQuestion{
-    margin-top: 2vh;
-    display: block;
-    margin: 0 auto;
+.h2ModifMdp {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #332940;
 }
 
-.titreCreaCompte{
-    padding: 3vh;
-}
-
-.labelCreeCompte{
+.labelModifMdp{
     display: block;
-    margin-top: 2vh;
     margin-bottom: 10px;
     font-size: 16px;
+    color: #332940;
 }
 
-.btnCreeCompte[type="submit"] {
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btnModifMdp[type="submit"] {
     background-color: #3A0CA3;
     color: #fff;
     border: none;
@@ -40,9 +41,8 @@
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 2vh;
 }
 
-.btnCreeCompte[type="submit"]:hover {
-    background-color: #7209B7;
+.btnModifMdp[type="submit"]:hover {
+    background-color: #663357;
 }

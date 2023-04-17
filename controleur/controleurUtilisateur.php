@@ -39,19 +39,6 @@ class controleurutilisateur {
         }
     }
 
-    //changer mot de passe utilisateur
-    public static function changerMdpUtilisateur() {
-        $id_utilisateur = self::getNumUtilisateur();
-        $utilisateur = self::getUtilisateur();
-        $ancMdp = $utilisateur[2]->get("mdp");
-        $nvMdp = $_POST['new-password'];
-        $ancMdpByPost = $_POST['current-password'];
-        if ($ancMdpByPost == $ancMdp) {
-            Utilisateur::updateMdp($id_utilisateur, $nvMdp);
-            header("Location: index.php?controleur=controleurModifMdp&action=afficheModifMdp");
-        } else {
-            header("Location: index.php?");
-        }   
-    }
+
 
 }
