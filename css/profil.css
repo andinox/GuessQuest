@@ -13,7 +13,13 @@
     display: flex;
 }
 
-#donneUnNom {
+#mainProfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgProfil{
     position: absolute;
     width: 100px;
     height: 100px;
