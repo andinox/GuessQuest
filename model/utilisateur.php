@@ -41,7 +41,7 @@ class Utilisateur extends Model{
     }
 
     //update mot de passe de l'utilisateur
-    public static function updateMdp ($id_utilisateur, $mdp) {
+    public static function updateMdp($id_utilisateur, $mdp) {
         $sql = "UPDATE Utilisateur SET mdp = :mdp WHERE id_utilisateur = :id_utilisateur";
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':mdp' => $mdp));
@@ -59,6 +59,15 @@ class Utilisateur extends Model{
 
     public static function ajouteQuizz($id_utilisateur) {
     }
+
+    public static function getImgProfil($id_utilisateur) {
+        $sql = "SELECT image FROM Utilisateur WHERE id_utilisateur = :id_utilisateur";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':id_utilisateur' => $id_utilisateur));
+        $tab = $req->fetchAll();
+        return $tab[0]["image"];
+    }
+
     public static function ajouteQuizz($id_utilisateur){
         $sql = "INSERT INTO `quiz` (`titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) VALUES ('NouveauQuiz', :Date, '0', '', NULL, NULL, '1', :id_utilisateur)";
         $req = Connexion::pdo()->prepare($sql);
@@ -89,7 +98,13 @@ class Utilisateur extends Model{
         return $question[0][0];
     }
 
-    
+    public function ajouteUtilisateur($pseudo, $mdp, $reponse , $image, $id_QuestionRecup) {
+
+        // Préparer la requête SQL
+        $sql = "INSERT INTO `utilisateur` (`??`,`pseudo`, `mdp`,`reponse`,`image`,`id_QuestionRecup`) VALUES ('',:pseudo, :mdp,:reponse,:image,:id_QuestionRecup)";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':pseudo' => $pseudo, ':mdp' => $mdp, ':reponse' => $reponse, ':image' => $image, ':id_QuestionRecup' => $id_QuestionRecup));
+    }    
 }
 
 ?>

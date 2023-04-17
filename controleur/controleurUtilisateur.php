@@ -27,4 +27,35 @@ class controleurutilisateur {
         return $id_Utilisateur;
     }
 
+
+    //recuperation tableau information utilisateur 
+    public static function getUtilisateur() {                   
+        $id_utilisateur = self::getNumUtilisateur();
+        if ($id_utilisateur != null) {
+            $utilisateur = Utilisateur::getUtilisateurByNum($id_utilisateur);
+            return $utilisateur;
+        } else {
+            return null;
+        }
+    }
+
+    //changer mot de passe utilisateur
+    public static function changerMdpUtilisateur() {
+        $id_utilisateur = self::getNumUtilisateur();
+        $utilisateur = self::getUtilisateur();
+        $ancMdp = $utilisateur[2]->get("mdp");
+        echo $ancMdp;
+        echo $id_utilisateur;
+        echo $utilisateur;
+        $nvMdp = $_POST['new-password'];
+        $ancMdpByPost = $_POST['current-password'];
+        if ($ancMdpByPost == $ancMdp) {
+            //Utilisateur::updateMdp($id_utilisateur, $nvMdp);
+            echo "ça marche !";
+            //header("Location: index.php?controleur=controleurModifMdp&action=afficheModifMdp");
+        } else {
+            //header("Location: index.php");
+        }   
+    }
+
 }
