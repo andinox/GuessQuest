@@ -26,6 +26,7 @@ $(".btn-c").click(async () => {
     $(".name-i").removeClass("none")
     $(".pass-i").removeClass("none")
     $(".valide").removeClass("none")
+    $(".cree-c").removeClass("none")
     anime({
         targets: ".name-i",
         opacity: 1,
@@ -56,6 +57,18 @@ $(".btn-c").click(async () => {
         duration: 500,
         delay: 100
     })
+    anime({
+        targets: ".cree-c",
+        translateX: {
+            value: '-50%',
+            duration: 1
+        },
+        opacity: 0.7,
+        translateY: '788%',
+        easing: 'easeInOutExpo',
+        duration: 500,
+        delay: 100
+    })
 
 
 })
@@ -63,14 +76,13 @@ $(".btn-i").click(async () => {
     typeOfConnection = 2
     anime({
         targets: ".btn-i",
-        height: 100,
-        opacity: 0,
+        opacity:0,
         easing: 'easeInOutExpo',
         duration: 300
     })
     anime({
         targets: ".btn-c",
-        opacity: 0,
+        opacity:0,
         delay: 300,
         duration: 100,
         easing: 'linear'
@@ -99,7 +111,23 @@ $(".btn-i").click(async () => {
         duration: 500,
         delay: 100
     })
+
 })
+
+$("#back").click(() => {
+    $(".btn-i").css("opacity","")
+    $(".btn-c").css("opacity","")
+    $(".btn-i").css("height","auto")
+    $(".btn-c").removeClass("none")
+    $(".btn-i").removeClass("none")
+    $(".btn-c").removeClass("none")
+    $(".name-i").addClass("none")
+    $(".pass-i").addClass("none")
+    $(".valide").addClass("none")
+    $(".cree-c").addClass("none")
+})
+
+
 
 $(".valide").click(
     async () => {
@@ -145,7 +173,44 @@ $(".valide").click(
                     });
                 break
             case 2:
-                console.log(mdp,name)
+                if (!name.includes(' ')) {
+                    if (name.length >= 12 && name.length!=0) {
+                        const options = {
+                            content: "Trop long !",
+                            showOnCreate: true,
+                            animation: "rotate",
+                            arrow: true,
+                            theme: 'wrong',
+                            trigger: 'manual',
+                            placement: 'bottom',
+                            delay: [500, 0],
+                            duration: 5
+                        };
+                        tippy(".valide", options);
+                    } else {
+                        var form = $('<form></form>');
+                        form.attr('method', 'post');
+                        form.attr('action', './index.php?controleur=ControleurConnexion&action=connecterInvite');
+
+                        var inputPseudo = $(`<input type="text" name="pseudo" value=${name}>`);
+                        form.append(inputPseudo);
+                        $("body").append(form)
+                        form.submit();
+                    }
+                } else {
+                    const options = {
+                        content: "Pas d'espace dans le pseudo !",
+                        showOnCreate: true,
+                        animation: "rotate",
+                        arrow: true,
+                        theme: 'wrong',
+                        trigger: 'manual',
+                        placement: 'bottom',
+                        delay: [500, 0],
+                        duration: 5
+                    };
+                    tippy(".valide", options);
+                }
                 break
         }
     }

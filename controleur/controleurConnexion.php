@@ -7,13 +7,15 @@ require_once ("./controleur/controleurUtilisateur.php");
 
 class controleurConnexion {
     public static function afficheConnexion() {
-        if (controleurutilisateur::sessionUtilisateur()) {
+        if (isset($_SESSION["TypeOfConn"]) && $_SESSION["TypeOfConn"] == "compte") {
             header("Location: index.php?controleur=controleurMain");//afficher notre Accueil
+        } else {
+            $titre = "Connexion";
+            include("./vue/debut.php");
+            include ("./vue/connexionTest.html");
+            include("./vue/footer.html");
         }
-        $titre = "Connexion";
-        include("./vue/debut.php");
-        include ("./vue/connexionTest.html");
-        include("./vue/footer.html");
+
     }
 
     public static function connecterUtilisateur(){
@@ -23,10 +25,17 @@ class controleurConnexion {
 
         if($b){
             $_SESSION["pseudo"] = $_POST["pseudo"];
+            $_SESSION["TypeOfConn"] = "compte";
             header("Location: index.php?controleur=controleurMain");//afficher notre Accueil
         } else {
             self::afficheConnexion();
         }
+    }
+
+    public static function connecterInvite() {
+        $_SESSION["pseudo"] = $_POST["pseudo"];
+        $_SESSION["TypeOfConn"] = "invite";
+        header("Location: index.php?controleur=controleurMain");//afficher notre Accueil
     }
 
     public static function deconnecterUtilisateur(){
