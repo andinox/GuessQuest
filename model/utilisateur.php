@@ -40,6 +40,16 @@ class Utilisateur extends Model{
         return $tab[0];
     }
 
+    //get Utilisateur by Pseudo
+    public static function getUtilisateurByPseudo($pseudo) {
+        $sql = "SELECT * FROM Utilisateur WHERE pseudo = :pseudo";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
+        $req->execute(array(':pseudo' => $pseudo));
+        $tab = $req->fetchAll();
+        return $tab[0];
+    }
+
     //update mot de passe de l'utilisateur
     public static function updateMdp($id_utilisateur, $mdp) {
         $sql = "UPDATE Utilisateur SET mdp = :mdp WHERE id_utilisateur = :id_utilisateur";

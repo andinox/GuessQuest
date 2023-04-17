@@ -5,7 +5,7 @@
 	$id_QuestionRecup = getId_QuestionRecupByPseudo($pseudoRenseigne);
 
     if($pseudo != null){
-        $question = getQuestionById_QuestionRecup($id_QuestionRecup)
+        $question = getQuestionById_QuestionRecup($id_QuestionRecup);
         $reponseCorrect = getReponseById_QuestionRecup($id_QuestionRecup);
 
         echo $question;
