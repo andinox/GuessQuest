@@ -23,7 +23,7 @@
 
  
 
-
+/*
  input[type=text], textarea, input[type=email] {
   padding: 12px;
   border-radius: 4px;
@@ -35,7 +35,7 @@
   resize: horizontal;
   display:inline-block;
  
-}
+}*/
 
 .fname {
   width: 60px;

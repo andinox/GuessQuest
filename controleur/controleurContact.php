@@ -1,6 +1,6 @@
 <?php
 
-class ControleurContact {
+class controleurContact {
 
     public static function afficheContact() {
         $titre = "Contact";

@@ -1,6 +1,6 @@
 <?php
 
-class ControleurRecuperationMdp {
+class controleurRecuperationMdp {
 
     public static function afficheRecuperationMdp() {
         $titre = "Recuperation Mdp";

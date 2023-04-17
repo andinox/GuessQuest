@@ -26,7 +26,7 @@ label {
     color: #332940;
 }
 
-input[type="text"],
+/*input[type="text"],
 input[type="email"],
 input[type="password"]{
     width: 100%;
@@ -34,7 +34,7 @@ input[type="password"]{
     border-radius: 5px;
     border-width: 1px;
     margin-bottom: 20px;
-}
+}*/
 
 button[type="submit"] {
     background-color: #3A0CA3;

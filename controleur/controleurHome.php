@@ -1,6 +1,6 @@
 <?php
 
-class ControleurHome {
+class controleurHome {
 
     public static function afficheHome() {
         $titre = "Home";
