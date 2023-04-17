@@ -4,7 +4,8 @@
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-<!-- ajouter les css de toutes les pages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ajouter les css de toutes les pages -->
     <title><?php echo $titre; ?></title>
 	<link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/connexionInvite.css">
