@@ -64,6 +64,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 3;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -97,6 +98,7 @@
     position: absolute;
     top: 50%; /*58*/
     left: 50%;
+    z-index: 3;
     transform: translate(-50%,-50%); /*50 58*/
     display: flex;
     flex-direction: row;
@@ -126,10 +128,39 @@
 }
 
 
+.cree-c {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 50%; /*58*/
+    left: 50%;
+    transform: translate(-50%,-50%); /*50 58*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cree-c p {
+    font-family: Raleway;
+    font-size: 0.9rem;
+}
+
+.cree-c span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cree-c p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
 
 .valide {
     opacity: 0;
     position: absolute;
+    z-index: 3;
     top: 50%; /*58*/
     left: 50%;
     transform: translate(-50%,-50%); /*50 58*/
@@ -148,7 +179,7 @@
     font-size: 2.5rem;
 }
 
-.name-i, .pass-i,.valide {
+.name-i, .pass-i,.valide,.cree-c {
     width: 255px;
     max-height: 50px;
 }
@@ -158,6 +189,10 @@
     font-size: 2.1rem;
     color: white;
 }
+
+
+
+
 
 
 .tippy-box[data-theme='wrong'] {
