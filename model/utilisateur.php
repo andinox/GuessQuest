@@ -71,12 +71,12 @@ class Utilisateur extends Model{
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':Date' => date("Y-m-d")));
     }
 
-    public function ajouteUtilisateur($pseudo, $mdp, $reponse , $image, $id_QuestionRecup) {
+    public static function ajouteUtilisateur($pseudo, $mdp, $reponse , $imageProfil, $id_QuestionRecup) {
 
         // Préparer la requête SQL
-        $sql = "INSERT INTO `utilisateur` (`??`,`pseudo`, `mdp`,`reponse`,`image`,`id_QuestionRecup`) VALUES ('',:pseudo, :mdp,:reponse,:image,:id_QuestionRecup)";
+        $sql = "INSERT INTO `utilisateur` (`pseudo`, `mdp`,`reponse`,`image`,`id_QuestionRecup`) VALUES (:pseudo, :mdp, :reponse, :imageProfil, :id_QuestionRecup)";
         $req = Connexion::pdo()->prepare($sql);
-        $req->execute(array(':pseudo' => $pseudo, ':mdp' => $mdp, ':reponse' => $reponse, ':image' => $image, ':id_QuestionRecup' => $id_QuestionRecup));
+        $req->execute(array(':pseudo' => $pseudo, ':mdp' => $mdp, ':reponse' => $reponse, ':imageProfil' => $imageProfil, ':id_QuestionRecup' => $id_QuestionRecup));
     }
     
 }

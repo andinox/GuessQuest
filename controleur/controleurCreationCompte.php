@@ -20,12 +20,19 @@ class controleurCreationCompte {
         $password_confirm = $_POST["password-confirm"];
         $id_QuestionRecup = $_POST["questionRecup"];
         $reponse = $_POST["reponse"];
-        $image = $_POST["image"];
+        $imageProfil = $_POST["image"];
+
+        
+
 
         // Vérifier que les mots de passe correspondent
         if($mdp == $password_confirm) {
+
+        // Enregistrer l'image dans la base de données
+        $imageProfil = file_get_contents($_FILES['image']['tmp_name']);
+        $imageProfil = base64_encode($imageProfil);
         // Ajouter le nouvel utilisateur
-        Utilisateur::ajouteUtilisateur($pseudo, $mdp, $reponse , $image, $id_QuestionRecup);
+        Utilisateur::ajouteUtilisateur($pseudo, $mdp, $reponse , $imageProfil, $id_QuestionRecup);
 
         header("Location: index.php?controleur=controleurCreationCompte&action=afficheCreationCompte");
     
