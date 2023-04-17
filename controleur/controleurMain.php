@@ -9,15 +9,16 @@ class controleurMain {
                 $id = Utilisateur::getId_UtilisateurByPseudo($name);
                 $img = Utilisateur::getImgProfil($id);
                 $data = base64_encode($img);
-            } else {
-                //dddd4
             }
+            $titre = "main";
+            include("./vue/debut.php");
+            include("./vue/main/main.html");
+            include("./vue/footer.html");
+        } else {
+            header("Location: index.php?controleur=controleurconnexion&action=afficheConnexion");
         }
 
 
-        $titre = "main";
-        include("./vue/debut.php");
-        include("./vue/main/main.html");
-        include("./vue/footer.html");
+
     }
 }
