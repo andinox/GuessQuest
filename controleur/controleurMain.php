@@ -8,7 +8,7 @@ class controleurMain {
             if ($_SESSION["TypeOfConn"] == "compte") {
                 $id = Utilisateur::getId_UtilisateurByPseudo($name);
                 $img = Utilisateur::getImgProfil($id);
-                $data = base64_encode($img);
+                $data = $img;
             }
             $titre = "main";
             include("./vue/debut.php");
