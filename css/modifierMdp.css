@@ -25,7 +25,7 @@
     color: #332940;
 }
 
-input[type="password"] {
+.inputModifMdp[type="password"] {
     width: 100%;
     padding: 10px;
     border-width: 1px;
