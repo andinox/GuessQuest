@@ -103,7 +103,7 @@ class Utilisateur extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':pseudo' => $pseudo, ':mdp' => $mdp, ':reponse' => $reponse, ':imageProfil' => $imageProfil, ':id_QuestionRecup' => $id_QuestionRecup));
     }
+
     
 }
-
 ?>
