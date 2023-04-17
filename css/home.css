@@ -1,16 +1,26 @@
 .home-accueil{
   margin-top: 3vh;
   margin-left: 3vh;
+  overflow: auto;
+  text-align: center;
 }
 
 
 .titre-home{
   font-size: 55px;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
+  text-align: center;
 }
 
 .text-titre-home {
   max-width: 50%;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.btnHome{
+  color: #fff ;
+  text-decoration: none;
 }
 
 
@@ -56,23 +66,24 @@
 .footer-home{
   margin-top: 6vh;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
 }
 
 .item-footer-home {
-  flex-basis: 25%;
-  padding: 0 10px;
-  box-sizing: border-box;
+  
+  flex: 1 1 260px;
+
   text-align: center;
-  margin: 5vh;
+  margin: 4vh;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   padding: 3vh;
   border-radius: 3vh;
 }
 
 @media only screen and (max-width: 768px) {
-  .item-footer-home {
-    max-width: calc(50% - 20px);
-  }
+
 }
 
 
@@ -88,4 +99,8 @@
 
 .footer-home-texte{
   text-align: justify;
+}
+
+.footer-home-titre{
+  margin-bottom: 2vh;
 }
