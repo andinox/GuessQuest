@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+}
+
 .home-accueil{
   margin-top: 3vh;
   margin-left: 3vh;
@@ -10,12 +15,14 @@
   font-size: 55px;
   margin-bottom: 5vh;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .text-titre-home {
   max-width: 50%;
   text-align: center;
   margin-left: 25%;
+  font-family: 'Raleway', sans-serif;
 }
 
 .btnHome{
@@ -43,6 +50,7 @@
 .button-content {
   position: relative;
   z-index: 1;
+  font-family: 'Raleway', sans-serif;
 }
 
 .button-home::before {
@@ -83,12 +91,14 @@
 }
 
 @media only screen and (max-width: 768px) {
-
+  .text-titre-home {
+    text-align: justify;
+  }
 }
 
 
 .image-container-home{
-  margin-top: 4vh;
+  margin-top: 1vh;
   margin-bottom: 5vh;
 }
 
@@ -99,8 +109,10 @@
 
 .footer-home-texte{
   text-align: justify;
+  font-family: 'Raleway', sans-serif;
 }
 
 .footer-home-titre{
   margin-bottom: 2vh;
+  font-family: 'Raleway', sans-serif;
 }
