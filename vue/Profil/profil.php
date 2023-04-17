@@ -3,7 +3,7 @@
     <!--Passage du BLOB en base64-->
     <img id="imgProfil" class="profil-img" src="data:image/jpeg;base64,<?php echo $pp; ?>"/>
     <section id="mainProfil">  
-        <h1 id="pseudo"><?php echo $pseudo ?></h1>
+        <h1 id="pseudoProfil"><?php echo $pseudo ?></h1>
         <div id="div_mdp">
             <div id="divLabelPwd">
                 <p class="pwdProfil">Mot de passe :</p>
