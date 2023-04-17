@@ -1,3 +1,4 @@
+<div id="particles-js"></div>
 
 <div class="container">
     <form class="form_creeCompte" action="index.php?controleur=controleurCreationCompte&action=creerCompte" method="post" enctype="multipart/form-data">
@@ -47,7 +48,15 @@
         <input class="textQuestion" id="reponse" name="reponse" required></input>
         <label for="image" class="labelCreeCompte">Choisir une image :</label>
         <input type="file" id="image" name="image">
-        <button class="btnCreeCompte" type="submit"><a href='../../controleur/controleurUtilisateur.php'></a>Créer un compte</button>
         </form>
+        <button id="btnSubmitCreaCompte" class="btnCreeCompte"><a href='../../controleur/controleurUtilisateur.php'></a>Créer un compte</button>
+
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="./js/checkPseudo.js"></script>
+    <script src="./assets/particles.js"></script>
+    <script src="./assets/app.js"></script>
 
