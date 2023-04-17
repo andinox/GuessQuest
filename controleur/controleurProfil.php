@@ -5,9 +5,8 @@ require_once ("./model/utilisateur.php");
 class controleurProfil {
 
     public static function afficheProfil(){
-        $u = Utilisateur::getUtilisateurByNum(0);
-        $pseudo = $u->get("pseudo");
-        $mdp = $u->get("mdp");
+        $pseudo = $_SESSION["pseudo"];
+        $u = Utilisateur::getUtilisateurByPseudo($pseudo);
         $pp = $u->get("image");
         $titre = "Profil - $pseudo";
         include("./vue/debut.php");
