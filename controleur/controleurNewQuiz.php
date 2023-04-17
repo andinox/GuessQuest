@@ -1,11 +1,12 @@
-<?php 
-require_once ("./model/model.php");
-require_once ("./model/utilisateur.php");
+<?php
 
-class ControleurNewQuiz {
+require_once ("model/model.php");
+require_once ("model/utilisateur.php");
+require_once ("controleur/controleurUtilisateur.php");
+class controleurNewQuiz {
 
-    public static function affiche() {;
 
+    public static function affiche() {
         $login = "Andinox";
         $mdp = "azerty";
         $b = Utilisateur::checkMDP($login, $mdp);
@@ -14,7 +15,7 @@ class ControleurNewQuiz {
         if ($b && $q) {
             $quizID = $_GET["quiz"];
         } elseif ($b) {
-            $u = Utilisateur::ajouteQuizz($login);
+            $u = Utilisateur::ajouteQuizz(0);
 
         }
 

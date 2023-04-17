@@ -1,6 +1,6 @@
 <?php 
 
-class ControleurModifMdp {
+class controleurModifMdp {
 
     public static function afficheModifMdp() {;
 

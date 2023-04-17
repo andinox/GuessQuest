@@ -13,8 +13,8 @@ class controleurutilisateur {
     
     //recuperation du numUtilisateur par GET
     public static function sessionUtilisateur() {
-        if (isset($_SESSION["login"])) {
-            return $_SESSION["login"];
+        if (isset($_SESSION["pseudo"])) {
+            return $_SESSION["pseudo"];
         } else {
             return null;
         }

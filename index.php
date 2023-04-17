@@ -1,5 +1,7 @@
-<?php 
+<?php
 session_start();
+require_once("./controleur/router.php");
+
 
 if (isset($_GET["c"])) {
     switch($_GET["c"]) {

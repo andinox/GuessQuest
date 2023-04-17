@@ -1,15 +1,12 @@
-<div id="profil">
-    <div id="profil-background">
-        <div id="profil-img"></div>
-    </div>
-    <div id="profil-info">
-        <ul id="liste">
-            <li> Pseudo : <?= echo $pseudo?>
-                <a href="#" class="btnModif">
-            </li>
-            <li> Mot de Passe : <?= echo $mdp?>
-                <a href="#" class="btnModif">
-            </li>
-        </ul>
-    </div>
+<div id="particles-js"></div>
+<div id="containerProfil">
+    <!--Passage du BLOB en base64-->
+    <img id="imgProfil" src="data:image/jpeg;base64,<?php echo base64_encode($pp); ?>" />   
+    <section id="mainProfil"> 
+        <div id="pseudo">
+            <h1><?php echo $pseudo ?></h1>
+        </div>
+    </section>
 </div>
+<script src="./assets/particles.js"></script>
+<script src="./assets/app.js"></script>
