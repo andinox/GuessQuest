@@ -57,8 +57,6 @@ class Utilisateur extends Model{
         return $tab[0][0];
     }
 
-    public static function ajouteQuizz($id_utilisateur) {
-    }
 
     public static function getImgProfil($id_utilisateur) {
         $sql = "SELECT image FROM Utilisateur WHERE id_utilisateur = :id_utilisateur";
@@ -74,7 +72,6 @@ class Utilisateur extends Model{
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':Date' => date("Y-m-d")));
     }
 
-    public static function ajouteUtilisateur($pseudo, $mdp, $reponse , $imageProfil, $id_QuestionRecup) {
     public static function getId_QuestionRecupByPseudo($pseudo) {
         $sql = "SELECT id_QuestionRecup FROM Utilisateur WHERE pseudo = :pseudo";
         $req = Connexion::pdo()->prepare($sql);
@@ -99,7 +96,7 @@ class Utilisateur extends Model{
         return $question[0][0];
     }
 
-    public function ajouteUtilisateur($pseudo, $mdp, $reponse , $image, $id_QuestionRecup) {
+    public static function ajouteUtilisateur($pseudo, $mdp, $reponse , $imageProfil, $id_QuestionRecup) {
 
         // Préparer la requête SQL
         $sql = "INSERT INTO `utilisateur` (`pseudo`, `mdp`,`reponse`,`image`,`id_QuestionRecup`) VALUES (:pseudo, :mdp, :reponse, :imageProfil, :id_QuestionRecup)";
