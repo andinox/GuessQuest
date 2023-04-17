@@ -44,13 +44,17 @@ class controleurutilisateur {
         $id_utilisateur = self::getNumUtilisateur();
         $utilisateur = self::getUtilisateur();
         $ancMdp = $utilisateur[2]->get("mdp");
+        echo $ancMdp;
+        echo $id_utilisateur;
+        echo $utilisateur;
         $nvMdp = $_POST['new-password'];
         $ancMdpByPost = $_POST['current-password'];
         if ($ancMdpByPost == $ancMdp) {
-            Utilisateur::updateMdp($id_utilisateur, $nvMdp);
-            header("Location: index.php?controleur=controleurModifMdp&action=afficheModifMdp");
+            //Utilisateur::updateMdp($id_utilisateur, $nvMdp);
+            echo "ça marche !";
+            //header("Location: index.php?controleur=controleurModifMdp&action=afficheModifMdp");
         } else {
-            header("Location: index.php?");
+            //header("Location: index.php");
         }   
     }
 
