@@ -44,12 +44,12 @@ if (isset($_GET["c"])) {
 } else {
           
     include("./vue/debut.php");
-    echo "<a href='?c=newquiz'>new Quiz</a>"; 
+    echo"<a href='?c=newquiz'>new Quiz</a>"; 
     echo"<a href='?c=connexion'>connexion</a>";
     echo"<a href='?c=home'>home</a>";
     echo"<a href='?c=contact'>contact</a>";
     echo"<a href='?c=recuperation_mdp'>recuperation_mdp</a>";
+    echo"<a href='?c=creationCompte'>creationCompte</a>";
     include("./vue/footer.html");  
-    include("./vue/footer.html");
 }
 ?>

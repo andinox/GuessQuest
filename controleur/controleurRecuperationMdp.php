@@ -8,4 +8,5 @@ class ControleurRecuperationMdp {
         include("./vue/recuperation_mdp/recuperation_mdp.html");
         include("./vue/footer.html");
     }
+
 }
