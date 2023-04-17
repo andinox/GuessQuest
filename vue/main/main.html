@@ -1,9 +1,11 @@
 <div id="particles-js"></div>
 <section class="main carteS">
     <header class="top-bar">
-        <img class="profil-img" src="./img/profil.png">
+        <div class="profil-img">
+            <img src="data:image/png;base64,<?php echo $data ?>">
+        </div>
         <div class="bando">
-            <div class="pseudo-n"><p>Andinox</p></div>
+            <div class="pseudo-n"><p><?php  echo $name ?></div>
             <div class="recherche">
                 <i class="bi bi-search"></i>
                 <input type="text" placeholder="Rechercher">
@@ -14,8 +16,16 @@
             </div>
         </div>
     </header>
-    <section>
-        
+    <section class="quizz-l">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </section>
     <img class="bg-logo" src="./img/logo_b.png">
 </section>

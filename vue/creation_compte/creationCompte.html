@@ -1,20 +1,53 @@
 
-    <div class="container">
-        <form action="index.php?controleur=controleurCreationCompte&action=creerCompte" method="post">
-            <h2>Créer un compte</h2>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
-            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required>
-            <label for="pseudo">Pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo" required>
-            <label for="email">Adresse e-mail :</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password" required>
-            <label for="password-confirm">Confirmer le mot de passe :</label>
-            <input type="password" id="password-confirm" name="password-confirm" required>
-            <button type="submit"><a href='../../controleur/controleurUtilisateur.php'></a>Créer un compte</button>
+<div class="container">
+    <form class="form_creeCompte" action="index.php?controleur=controleurCreationCompte&action=creerCompte" method="post" enctype="multipart/form-data">
+        <h2 class="titreCreaCompte">Créer un compte</h2>
+        <label class="labelCreeCompte" for="pseudo">Pseudo :</label>
+        <input type="text" id="pseudo" name="pseudo" required>
+        <label class="labelCreeCompte" for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        <label class="labelCreeCompte" for="password-confirm">Confirmer le mot de passe :</label>
+        <input type="password" id="password-confirm" name="password-confirm" required>
+        <label class="labelCreeCompte" for="questionRecup">Question de récupération :</label>
+        <select id="questionRecup" name="questionRecup">
+            <option value="1">Quel est votre chanteur ou groupe de musique préféré ?</option>
+            <option value="2">Quel est votre fruit préféré ?</option>
+            <option value="3">Quel est votre livre préféré ?</option>
+            <option value="4">Quel est votre genre de film préféré ?</option>
+            <option value="5">Quel est votre boisson préférée ?</option>
+            <option value="6">Quel est votre plat préféré ?</option>
+            <option value="7">Quel est votre sport préféré ?</option>
+            <option value="8">Quel est votre souvenir d'enfance préféré ?</option>
+            <option value="9">Quel est votre objectif à long terme dans la vie ?</option>
+            <option value="10">Quelle est votre ville préférée pour voyager ?</option>
+            <option value="11">Quel est votre type de musique préféré ?</option>
+            <option value="12">Quel est votre superhéros préféré ?</option>
+            <option value="13">Quelle est votre couleur préférée ?</option>
+            <option value="14">Quel est votre animal préféré ?</option>
+            <option value="15">Quelle est votre citation préférée ?</option>
+            <option value="16">Quel est votre passe-temps préféré ?</option>
+            <option value="17">Quel est votre jeu vidéo préféré ?</option>
+            <option value="18">Quel est votre lieu de vacances préféré ?</option>
+            <option value="19">Quel est votre mois préféré de l'année ?</option>
+            <option value="20">Quelle est votre émission de télévision préférée ?</option>
+            <option value="21">Quel est votre métier de rêve ?</option>
+            <option value="22">Quelle est votre destination de voyage préférée ?</option>
+            <option value="23">Quelle est votre pièce préférée dans votre maison ?</option>
+            <option value="24">Quelle est votre célébrité préférée ?</option>
+            <option value="25">Quelle est votre fête préférée de l'année ?</option>
+            <option value="26">Quelle est votre marque de vêtements préférée ?</option>
+            <option value="27">Quel est votre style de décoration intérieure préféré ?</option>            
+            <option value="28">Quel est votre parfum préféré ?</option>
+            <option value="29">Quel est votre moyen de transport préféré ?</option>
+            <option value="30">Quel est votre type de paysage préféré ?</option>
+            <option value="31">Quel est votre genre de littérature préféré ?</option>
+            <option value="32">Quel est votre genre de danse préféré ?</option>
+        </select>
+        <label class="labelCreeCompte" for="reponse">Réponse :</label>
+        <input class="textQuestion" id="reponse" name="reponse" required></input>
+        <label for="image" class="labelCreeCompte">Choisir une image :</label>
+        <input type="file" id="image" name="image">
+        <button class="btnCreeCompte" type="submit"><a href='../../controleur/controleurUtilisateur.php'></a>Créer un compte</button>
         </form>
     </div>
 
