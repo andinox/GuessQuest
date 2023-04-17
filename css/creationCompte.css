@@ -5,7 +5,8 @@
     text-align: center;
     padding-top: 50px;
     overflow: auto;
-
+    z-index: 4;
+    position: relative;
 }
 
 .form_creeCompte {

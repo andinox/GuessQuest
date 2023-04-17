@@ -22,8 +22,6 @@ class controleurCreationCompte {
         $reponse = $_POST["reponse"];
         $imageProfil = $_POST["image"];
 
-        
-
 
         // Vérifier que les mots de passe correspondent
         if($mdp == $password_confirm) {
@@ -34,8 +32,10 @@ class controleurCreationCompte {
         // Ajouter le nouvel utilisateur
         Utilisateur::ajouteUtilisateur($pseudo, $mdp, $reponse , $imageProfil, $id_QuestionRecup);
 
-        header("Location: index.php?controleur=controleurCreationCompte&action=afficheCreationCompte");
+        header("Location: index.php?controleur=controleurMain");
     
+        }else{
+            header("Location: index.php?controleur=controleurCreationCompte&action=afficheCreationCompte");
         }
 
 
@@ -43,3 +43,4 @@ class controleurCreationCompte {
   
 
 }
+
