@@ -67,12 +67,12 @@ class Utilisateur extends Model{
         $tab = $req->fetchAll();
         return $tab[0]["image"];
     }
-
+    /*
     public static function ajouteQuizz($id_utilisateur){
         $sql = "INSERT INTO `quiz` (`titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) VALUES ('NouveauQuiz', :Date, '0', '', NULL, NULL, '1', :id_utilisateur)";
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':Date' => date("Y-m-d")));
-    }
+    }*/
 
     public static function getId_QuestionRecupByPseudo($pseudo) {
         $sql = "SELECT id_QuestionRecup FROM Utilisateur WHERE pseudo = :pseudo";
