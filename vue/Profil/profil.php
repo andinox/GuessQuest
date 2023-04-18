@@ -17,5 +17,7 @@
         </div>
     </section>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/profil.js"></script>
 <script src="./assets/particles.js"></script>
 <script src="./assets/app.js"></script>

@@ -22,7 +22,5 @@ class controleurMain {
             header("Location: index.php?controleur=controleurconnexion&action=afficheConnexion");
         }
 
-
-
     }
 }
