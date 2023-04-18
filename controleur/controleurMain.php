@@ -4,11 +4,15 @@ require_once ("./model/utilisateur.php");
 class controleurMain {
     public static function affiche() {
         if (controleurutilisateur::sessionUtilisateur()) {
+            $use = "";
+            $data = "./img/profil.png";
             $name = $_SESSION["pseudo"];
             if ($_SESSION["TypeOfConn"] == "compte") {
                 $id = Utilisateur::getId_UtilisateurByPseudo($name);
                 $img = Utilisateur::getImgProfil($id);
-                $data = $img;
+                $data = "data:image/png;base64,$img";
+            } else {
+                $use = "display:none";
             }
             $titre = "main";
             include("./vue/debut.php");

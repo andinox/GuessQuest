@@ -2,10 +2,18 @@
 <section class="main carteS">
     <header class="top-bar">
         <div class="profil-img">
-            <img src="data:image/png;base64,<?php echo $data ?>">
+            <img src="<?php echo $data?>">
         </div>
         <div class="bando">
-            <div class="pseudo-n"><p><?php  echo $name ?></div>
+            <div class="pseudo-n">
+                <p class="name-btn"><?php  echo $name ?>
+                <div class="menu-p none">
+                    <div style="<?php  echo $use ?>"><a href="./index.php?controleur=controleurProfil">Profil</a></div>
+                    <div style="<?php  echo $use ?>"><a href="./index.php?controleur=controleurScore">Scores</a></div>
+                    <div style="<?php  echo $use ?>"><a href="./index.php?controleur=controleurMesQuiz">Quiz</a></div>
+                    <div><a href="./index.php?controleur=controleurConnexion&action=deconnecterUtilisateur">Deconnexion</a></div>
+                </div>
+            </div>
             <div class="recherche">
                 <i class="bi bi-search"></i>
                 <input type="text" placeholder="Rechercher">
@@ -29,5 +37,7 @@
     </section>
     <img class="bg-logo" src="./img/logo_b.png">
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/main.js"></script>
 <script src="./assets/particles.js"></script>
 <script src="./assets/app.js"></script>
