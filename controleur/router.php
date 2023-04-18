@@ -5,8 +5,9 @@ $controleur = "controleurConnexion";
 $action = "afficheConnexion";
 
 $tableauControleur = ["controleurQuiz", "controleurNewQuiz","controleurConnexion","controleurHome","controleurContact","controleurRecuperationMdp","controleurProfil",
-"controleurInvite","controleurCreationCompte","controleurModifMdp","controleurConnexionTest","controleurMain"];
+"controleurInvite","controleurCreationCompte","controleurModifMdp","controleurConnexionTest","controleurMain","controleurMesQuiz"];
 $actionParDefaut = array(
+    "controleurMesQuiz" => "affiche",
     "controleurQuiz" => "afficheStart",
     "controleurNewQuiz" => "affiche",
     "controleurConnexion" => "afficheConnexion",
