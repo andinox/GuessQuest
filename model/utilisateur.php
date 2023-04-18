@@ -114,5 +114,13 @@ class Utilisateur extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':pseudo' => $pseudo, ':mdp' => $mdp, ':reponse' => $reponse, ':imageProfil' => $imageProfil, ':id_QuestionRecup' => $id_QuestionRecup));
     }
+
+    public static function getMdpByPseudo($pseudo){
+        $sql = "SELECT mdp FROM Utilisateur WHERE pseudo = :pseudo";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':pseudo' => $pseudo));
+        $mdp = $req->fetchAll();
+        return $mdp[0][0];
+    }
 }
 ?>
