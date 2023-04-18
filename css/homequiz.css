@@ -1,0 +1,67 @@
+.quiz-l {
+    background-image: none;
+    height: 70%;
+    width: 25%;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pdp {
+    position: absolute;
+    top: -13%;
+    left: 50%;
+    transform: translate(-50%,-0%);
+    width: 35%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 100%;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px, rgba(0, 0, 0, 0.29) 0px 0px 0px 6px
+
+}
+
+.list-qz {
+    border-top: 1px solid rgba(0, 0, 0, 0.36);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+    width: 90%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-q-l {
+    font-family: Raleway;
+}
+
+.btn-c-q {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.btn-c-q:hover {
+    cursor: pointer;
+}
+
+.pdq {
+    font-family: Raleway;
+    font-size: 2rem;
+    opacity: 0.3;
+
+}
+
+.btn-c-q p {
+    font-family: Raleway;
+}
+.pdp img {
+    height: 100%;
+}

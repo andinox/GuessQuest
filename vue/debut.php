@@ -17,7 +17,8 @@
         <link rel="stylesheet" href="./css/newQuiz.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/quiz.css">
-        <link rel="stylesheet" href="./css/adminListeReport.css"> 
+        <link rel="stylesheet" href="./css/adminListeReport.css">
+        <link rel="stylesheet" href="./css/homequiz.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
