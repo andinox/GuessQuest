@@ -19,6 +19,7 @@ class controleurRecuperationMdp {
         $question = utilisateur::getQuestionById_QuestionRecup($idQuestionRecup);
 
         // Afficher la question
+        self::afficheRecuperationMdp();
     }
 
     public static function verifieReponseQuestionMdp($pseudo, $reponseDonnee){
