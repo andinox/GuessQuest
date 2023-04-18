@@ -7,7 +7,11 @@ require_once ("./model/question.php");
 class controleurQuiz {
 
     public static function afficheStart(){
-        $id = 1;
+        if (isset($_POST["identifiant"])) {
+            $id = $_POST["identifiant"];
+        }
+        else
+            $id = 1;
         //Récupération du quiz par l'id
         $quiz = Quiz::getQuizById($id);
         $titre = $quiz->get("titreQuiz");

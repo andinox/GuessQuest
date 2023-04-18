@@ -1,4 +1,4 @@
-<div id="particles-js"></div>
+    <div id="particles-js"></div>
 
     <div class="card-recup-mdp">
         <form action="index.php?controleur=controleurRecuperationMdp&action=afficherQuestionMdp">
@@ -9,19 +9,20 @@
                 <span class="button-content">Valider</span>
             </button>
         </form>
+        <form action="index.php?controleur=controleurRecuperationMdp&action=afficherQuestionMdp"></form>
             <h2 class="questionRecupMdp"><?php echo $question ?></h2>
 
             <p class="pRecupMdp">Saisissez votre réponse</p>
             <input class="inputRecupMdp" type="text" id="reponse" name="reponse" placeholder="un seul mot, en minuscules">
 
             <p class="MdpTrouver"></p>
-
             
             <p class="pRecupMdp">Vous rencontrez des problèmes ?</p>
             <p class="pRecupMdp2"><U>sav@guest-quest.com</U></p>
-            <button type="submitS" id="btn_click-home" class="button-home">
+            <button type="submit" id="btn_click-home2" class="button-home">
                 <span class="button-content">Envoyer</span>
             </button>
+        </form>
     </div>
 
     <script src="./assets/particles.js"></script>

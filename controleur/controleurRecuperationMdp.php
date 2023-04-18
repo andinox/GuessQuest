@@ -5,12 +5,13 @@ class controleurRecuperationMdp {
     public static function afficheRecuperationMdp() {
         $titre = "Recuperation Mdp";
         $question = "";
+        $pseudo = "";
         include("./vue/debut.php");
         include("./vue/recuperation_mdp/recuperation_mdp.html");
         include("./vue/footer.html");
     }
 
-    public static function afficherQuestionMdp($pseudo){
+    public static function afficherQuestionMdp(){
         // Récupérer les données du formulaire
         $pseudo = $_POST["pseudo"];
 
@@ -22,15 +23,17 @@ class controleurRecuperationMdp {
         self::afficheRecuperationMdp();
     }
 
-    public static function verifieReponseQuestionMdp($pseudo, $reponseDonnee){
+    public static function verifieReponseQuestionMdp(){
+        // Récupérer les données du formulaire
         $reponseDonnee = $_POST["reponse"];
         $reponse = utilisateur::getReponseById_QuestionRecup($idQuestionRecup);
-        //trouver le mdp de l'utilisateur
 
+        // Afficher le mdp si la réponse à la question est correcte
         if($reponse == $reponseDonnee){
-            echo '<script>document.querySelector(".MdpTrouver").innerHTML = "' . $mdp . '";</script>'; //l'afficher sur la page
-        }else{
-            // Afficher "Mauvaise réponse, si vous ne vous rappelez plus de votre réponse, contactez le support (lien vers la page de contact)"
+            $mdp = utilisateur::getMdpByPseudo($pseudo);
+            echo '<script>document.querySelector(".MdpTrouver").innerHTML = "' . $mdp . '";</script>'; 
+        } else {
+            echo '<script>document.querySelector(".MdpTrouver").innerHTML = "' . "Mauvaise réponse" . '";</script>';
         }
     }
 }

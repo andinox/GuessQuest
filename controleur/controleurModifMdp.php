@@ -4,7 +4,7 @@ require_once ("./model/utilisateur.php");
 
 class controleurModifMdp {
 
-    public static function afficheModifMdp() {;
+    public static function afficheModifMdp() {
 
         $titre = "Modification Mdp";
         include("vue/debut.php");
