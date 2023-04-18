@@ -1,19 +1,22 @@
 <?php
-require_once ("model/model.php");
-require_once ("model/utilisateur.php");
-require_once ("controleur/controleurUtilisateur.php");
-class controleurCreationCompte {
 
-public static function afficheCreationCompte() {
-    $titre = "Création Compte";
-    include("./vue/debut.php");
-    include("./vue/creation_compte/creationCompte.html");
-    include("./vue/footer.html");
-}
+require_once("model/model.php");
+require_once("model/utilisateur.php");
+require_once("controleur/controleurUtilisateur.php");
+class controleurCreationCompte
+{
+
+    public static function afficheCreationCompte()
+    {
+        $titre = "Création Compte";
+        include("./vue/debut.php");
+        include("./vue/creation_compte/creationCompte.html");
+        include("./vue/footer.html");
+    }
 
 
 
-public static function creerCompte()
+    public static function creerCompte()
     {
         // Récupérer les données du formulaire
         $pseudo = $_POST["pseudo"];
@@ -36,13 +39,13 @@ public static function creerCompte()
                 header("Location: index.php?controleur=controleurMain");
 
 
-            }else {
+            } else {
                 Utilisateur::ajouteUtilisateur($pseudo, $mdp, $reponse, $imageProfil, $id_QuestionRecup);
                 header("Location: index.php?controleur=controleurMain");
 
             }
         } else {
-           header("Location: index.php?controleur=controleurCreationCompte&action=afficheCreationCompte");
+            header("Location: index.php?controleur=controleurCreationCompte&action=afficheCreationCompte");
         }
 
 
