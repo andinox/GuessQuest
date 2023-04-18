@@ -8,7 +8,7 @@ require_once ("./model/score.php");
 class controleurQuiz {
 
     public static function afficheStart(){
-        
+
         if (isset($_POST["identifiant"])) {
             $idQuiz = $_POST["identifiant"];
         }
@@ -18,7 +18,6 @@ class controleurQuiz {
 
         //Récupération du quiz par l'id
         $quiz = Quiz::getQuizById($idQuiz);
-        json_encode($quiz);
         $titre = $quiz->get("titreQuiz");
         //Récupération des questions par l'id du quiz ($questions = un tableau de question)
         $questions = Question::getQuestionsByIdQuiz($idQuiz);
@@ -41,6 +40,9 @@ class controleurQuiz {
             $score = $value->get("score");
             array_push($tabScores, $score);
         }*/
+
+        $imgQuiz = $quiz->get("image");
+        $couleurQuiz = $quiz->get("couleur");
 
         include("./vue/debut.php");
         include("./vue/Quiz/startQuiz.php");

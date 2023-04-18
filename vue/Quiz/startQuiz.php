@@ -1,6 +1,6 @@
 <div id="containerStartQuiz">
     <section id="sectionStartQuiz">
-        <div id="fondQuiz"><img id="imgFond" src=""></div>
+        <div id="fondQuiz" style="<?php if (!empty($imgQuiz)) : ?>background-image: url('data:image/jpeg;base64,<?php echo base64_encode($imgQuiz);?>');<?php else : ?>background-color: <?php $couleurQuiz;?>; height: 15%<?php endif; ?>"></div>
         <div id="mainStartQuiz">
             <div id="titreStartQuiz">
                 <h1><?php echo $titre; ?></h1>
