@@ -8,7 +8,13 @@ require_once ("./model/score.php");
 class controleurQuiz {
 
     public static function afficheStart(){
-        $idQuiz = 1;
+        
+        if (isset($_POST["identifiant"])) {
+            $idQuiz = $_POST["identifiant"];
+        }
+        else{
+            $idQuiz = 1;
+        }
 
         //Récupération du quiz par l'id
         $quiz = Quiz::getQuizById($idQuiz);
