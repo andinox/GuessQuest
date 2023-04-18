@@ -1,14 +1,15 @@
 <div id="particles-js"></div>
 
     <div class="card-recup-mdp">
+        <form>
             <h1>Retrouver votre compte GuestQuest</h1>
             <p class="pRecupMdp">Saisissez votre pseudo</p>
             <input class="inputRecupMdp" type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
-            <button type="submitS" id="btn_click-home" class="button-home">
+            <button type="submit" id="btn_click-home" class="button-home">
                 <span class="button-content">Valider</span>
             </button>
-
-            <h2 class="questionRecupMdp"></h2>
+        </form>
+            <h2 class="questionRecupMdp"><?php echo $question ?></h2>
 
             <p class="pRecupMdp">Saisissez votre réponse</p>
             <input class="inputRecupMdp" type="text" id="reponse" name="reponse" placeholder="un seul mot, en minuscules">

@@ -4,6 +4,7 @@ class controleurRecuperationMdp {
 
     public static function afficheRecuperationMdp() {
         $titre = "Recuperation Mdp";
+        $question = "";
         include("./vue/debut.php");
         include("./vue/recuperation_mdp/recuperation_mdp.html");
         include("./vue/footer.html");
@@ -18,7 +19,6 @@ class controleurRecuperationMdp {
         $question = utilisateur::getQuestionById_QuestionRecup($idQuestionRecup);
 
         // Afficher la question
-        echo '<script>document.querySelector(".questionRecupMdp").innerHTML = "' . $question . '";</script>';
     }
 
     public static function verifieReponseQuestionMdp($pseudo, $reponseDonnee){
