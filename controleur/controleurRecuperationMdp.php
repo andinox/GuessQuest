@@ -10,25 +10,25 @@ class controleurRecuperationMdp {
     }
 
     public static function afficherQuestionMdp($pseudo){
-        $id_question = utilisateur::getId_QuestionRecupByPseudo($pseudo);
-        $question = utilisateur::getQuestionById_QuestionRecup($id_question);
+        // Récupérer les données du formulaire
+        $pseudo = $_POST["pseudo"];
+
+        $utilisateur = utilisateur::getUtilisateurByPseudo($pseudo);
+        $idQuestionRecup = $utilisateur->get("id_QuestionRecup");
+        $question = utilisateur::getQuestionById_QuestionRecup($idQuestionRecup);
+
         // Afficher la question
+        echo '<script>document.querySelector(".questionRecupMdp").innerHTML = "' . $question . '";</script>';
     }
 
     public static function verifieReponseQuestionMdp($pseudo, $reponseDonnee){
-        $id_question = utilisateur::getId_QuestionRecupByPseudo($pseudo);
-        $reponse = utilisateur::getReponseById_QuestionRecup($id_question);
-
-        if($reponse == $reponseDonnee)
-            // Nouvelle page pour changer de MDP
-        else
+        $reponseDonnee = $_POST["reponse"];
+        $reponse = utilisateur::getReponseById_QuestionRecup($idQuestionRecup);
+        $mdp = //trouver le mdp de l'utilisateur
+        if($reponse == $reponseDonnee){
+            echo '<script>document.querySelector(".MdpTrouver").innerHTML = "' . $mdp . '";</script>'; //l'afficher sur la page
+        }else{
             // Afficher "Mauvaise réponse, si vous ne vous rappelez plus de votre réponse, contactez le support (lien vers la page de contact)"
-
+        }
     }
-
-    public static function changerMdp($pseudo, $mdp){
-        $id_utilisateur = utilisateur::getId_UtilisateurByPseudo($pseudo);
-        utilisateur::updateMdp($id_utilisateur, $mdp);
-    }
-
 }

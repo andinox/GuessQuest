@@ -33,7 +33,15 @@
     font-size: 16px;
 }
 
-.btnCreeCompte[type="submit"] {
+.inputCreaCompte{
+    width: 100%;
+    padding: 10px;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btnCreeCompte {
     background-color: #3A0CA3;
     color: #fff;
     border: none;
@@ -44,6 +52,6 @@
     margin-top: 2vh;
 }
 
-.btnCreeCompte[type="submit"]:hover {
+.btnCreeCompte:hover {
     background-color: #7209B7;
 }

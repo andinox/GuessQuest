@@ -7,6 +7,12 @@
   height: auto;
   border-radius: 2vh;
   text-align: center;
+  z-index: 4;
+  position: relative;
+ }
+
+ .pRecupMdp{
+  padding: 2vh;
  }
 
 
@@ -65,4 +71,12 @@
     rgba(99, 88, 238, 1) 94.3%
   );
   transition: all 0.475s;
+}
+
+.inputRecupMdp{
+  width: 100%;
+  padding: 10px;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }

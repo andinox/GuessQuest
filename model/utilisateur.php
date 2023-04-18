@@ -75,6 +75,7 @@ class Utilisateur extends Model{
         $tab = $req->fetchAll();
         return $tab[0]["image"];
     }
+
     /*
     public static function ajouteQuizz($id_utilisateur){
         $sql = "INSERT INTO `quiz` (`titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) VALUES ('NouveauQuiz', :Date, '0', '', NULL, NULL, '1', :id_utilisateur)";
@@ -113,7 +114,5 @@ class Utilisateur extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':pseudo' => $pseudo, ':mdp' => $mdp, ':reponse' => $reponse, ':imageProfil' => $imageProfil, ':id_QuestionRecup' => $id_QuestionRecup));
     }
-
-    
 }
 ?>

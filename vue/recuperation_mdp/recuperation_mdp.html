@@ -1,35 +1,27 @@
-
-<div class="card">
-    <table>
-        <tbody>
-            <tr>
-                <td>
-                    <form action="recuperation_mdp.php" method="POST">
-                        <div class="recuperation-mdp">
-                            <h1>Retrouver votre compte GuestQuest</h1>
-                            <h2>Dites-nous en plus sur votre compte.</H2>
-                            <p>Saisissez votre pseudo d'utilisateur</p>
-                            <input type="text" name="pseudoRenseigne" placeholder="Votre pseudo">
-                            <p>Vous rencontrez des problèmes avec votre nom d'utilisateur</p>
-                            <p><U>sav@guest-quest.com</U></p>
-                            <button class="continuer-btn" type="sumbit">Continuer</button>
-                        </div>
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
+<div id="particles-js"></div>
 
     <div class="card-recup-mdp">
             <h1>Retrouver votre compte GuestQuest</h1>
-            <h2>Dites-nous en plus sur votre compte.</H2>
-            <p>Saisissez votre adresse e-mail ou votre numéro de téléphone</p>
-            <input type="text" name="emailORphone">
-            <p>Vous rencontrez des problèmes avec votre adresse e-mail ou votre téléphone ?</p>
-            <p><U>sav@guest-quest.com</U></p>
-            <button id="btn_click-home" class="button-home">
+            <p class="pRecupMdp">Saisissez votre pseudo</p>
+            <input class="inputRecupMdp" type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
+            <button type="submitS" id="btn_click-home" class="button-home">
+                <span class="button-content">Valider</span>
+            </button>
+
+            <h2 class="questionRecupMdp"></h2>
+
+            <p class="pRecupMdp">Saisissez votre réponse</p>
+            <input class="inputRecupMdp" type="text" id="reponse" name="reponse" placeholder="un seul mot, en minuscules">
+
+            <p class="MdpTrouver"></p>
+
+            
+            <p class="pRecupMdp">Vous rencontrez des problèmes ?</p>
+            <p class="pRecupMdp2"><U>sav@guest-quest.com</U></p>
+            <button type="submitS" id="btn_click-home" class="button-home">
                 <span class="button-content">Envoyer</span>
             </button>
     </div>
+
+    <script src="./assets/particles.js"></script>
+    <script src="./assets/app.js"></script> 
