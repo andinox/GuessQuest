@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce9631b8-8a1d-4013-816a-dc7beebc6279" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vue/mesquiz/homequiz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controleur/controleurCreationCompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurCreationCompte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurMesQuiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurMesQuiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_connexion/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/recuperation_mdp/recuperation_mdp.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue/recuperation_mdp/recuperation_mdp.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +86,7 @@
       <workItem from="1681717076597" duration="10821000" />
       <workItem from="1681737015719" duration="14076000" />
       <workItem from="1681806204512" duration="5100000" />
-      <workItem from="1681821817744" duration="5167000" />
+      <workItem from="1681821817744" duration="8242000" />
     </task>
     <servers />
   </component>
