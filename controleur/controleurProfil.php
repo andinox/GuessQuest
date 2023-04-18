@@ -13,9 +13,5 @@ class controleurProfil {
         include("./vue/Profil/profil.php");
         include("./vue/footer.html");
     }
-
-    public static function affiche() {
-        
-    }
 }
 ?>

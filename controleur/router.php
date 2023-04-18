@@ -4,9 +4,10 @@ Connexion::connect();
 $controleur = "controleurConnexion";
 $action = "afficheConnexion";
 
-$tableauControleur = ["controleurNewQuiz","controleurConnexion","controleurHome","controleurContact","controleurRecuperationMdp","controleurProfil",
+$tableauControleur = ["controleurQuiz", "controleurNewQuiz","controleurConnexion","controleurHome","controleurContact","controleurRecuperationMdp","controleurProfil",
 "controleurInvite","controleurCreationCompte","controleurModifMdp","controleurConnexionTest","controleurMain"];
 $actionParDefaut = array(
+    "controleurQuiz" => "afficheStart",
     "controleurNewQuiz" => "affiche",
     "controleurConnexion" => "afficheConnexion",
     "controleurHome" => "afficheHome",
