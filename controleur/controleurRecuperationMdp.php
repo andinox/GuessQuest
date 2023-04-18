@@ -24,7 +24,8 @@ class controleurRecuperationMdp {
     public static function verifieReponseQuestionMdp($pseudo, $reponseDonnee){
         $reponseDonnee = $_POST["reponse"];
         $reponse = utilisateur::getReponseById_QuestionRecup($idQuestionRecup);
-        $mdp = //trouver le mdp de l'utilisateur
+        //trouver le mdp de l'utilisateur
+
         if($reponse == $reponseDonnee){
             echo '<script>document.querySelector(".MdpTrouver").innerHTML = "' . $mdp . '";</script>'; //l'afficher sur la page
         }else{
