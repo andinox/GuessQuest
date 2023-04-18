@@ -1,4 +1,19 @@
 <div id="particles-js"></div>
-<section class="main"></section>
+<section class="main quiz-l">
+    <div class="pdp" onclick="window.location.href='./index.php?controleur=controleurMain'">
+        <img src="<?php echo $data?>">
+    </div>
+    <h1 class="title-q-l">Mes Quiz</h1>
+    <div class="list-qz">
+        <?php
+            if (empty($quiz)){
+                echo "<p class='pdq'>Pas de Quiz ?!?</p>";
+            }
+        ?>
+    </div>
+    <div class="btn-c-q"  onclick="window.location.href='./index.php?controleur=controleurNewQuiz'">
+        <p>Crée un Quiz</p>
+    </div>
+</section>
 <script src="./assets/particles.js"></script>
 <script src="./assets/app.js"></script>
