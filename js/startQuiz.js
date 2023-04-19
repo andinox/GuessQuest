@@ -2,12 +2,13 @@ $("#startBtnStartQuiz").click(()=>{
     window.location.href = "index.php?controleur=controleurQuiz&action=afficheQuiz";
 });
 
-$.ajax({
-    url: "./model/quiz.php",
-    dataType: "json",
-    success: function(data) {
-        var img = data.image;
-        var url = URL.createObjectURL(img);
-        $('#fondQuiz').css('background-image', 'url(' + url + ')');
-    }
+$("#exitBtnStartQuiz").click(()=>{
+    window.location.href = "index.php?controleur=controleurMain";
 });
+
+/*
+//Afficher le profil des autres joueurs
+$(".profilJoueur").click(()=>{
+    window.location.href = "index.php?controleur=controleurQuiz&action=afficheQuiz";
+})
+*/

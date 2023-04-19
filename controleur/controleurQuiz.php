@@ -8,7 +8,7 @@ require_once ("./model/score.php");
 class controleurQuiz {
 
     public static function afficheStart(){
-        
+
         if (isset($_POST["identifiant"])) {
             $idQuiz = $_POST["identifiant"];
         }
@@ -18,7 +18,6 @@ class controleurQuiz {
 
         //Récupération du quiz par l'id
         $quiz = Quiz::getQuizById($idQuiz);
-        json_encode($quiz);
         $titre = $quiz->get("titreQuiz");
         //Récupération des questions par l'id du quiz ($questions = un tableau de question)
         $questions = Question::getQuestionsByIdQuiz($idQuiz);
@@ -30,17 +29,22 @@ class controleurQuiz {
         }
 
         $pseudo = $_SESSION["pseudo"];
-        $u = Utilisateur::getUtilisateurByPseudo($pseudo);
-        $idUser = $u->get("id_Utilisateur");
-        $imgUser = $u->get("image");
-        //Récupération des scores sur ce quiz
-        $scores = Score::getScoresByIdQuizAndUser($idQuiz,$idUser);
-        /*Tableau des scores sur ce quiz
-        $tabScores = array();
-        foreach($scores as $value){
-            $score = $value->get("score");
-            array_push($tabScores, $score);
-        }*/
+
+        if($_SESSION["TypeOfConn"] == "compte"){
+            $u = Utilisateur::getUtilisateurByPseudo($pseudo);
+            $idUser = $u->get("id_Utilisateur");
+            $imgUser = "data:image/jpeg;base64,";
+            $imgUser .= $u->get("image");
+            //Récupération du score sur ce quiz
+            $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
+            $score .= "/". count($tabTxtQuestions);
+        } else{
+            $imgUser = "./img/profil.png";
+        }
+        
+        //Récupération des informations sur le quiz
+        $imgQuiz = $quiz->get("image");
+        $couleurQuiz = $quiz->get("couleur");
 
         include("./vue/debut.php");
         include("./vue/Quiz/startQuiz.php");

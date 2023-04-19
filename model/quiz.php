@@ -6,6 +6,7 @@ class Quiz extends Model{
     protected $dateCreation;
     protected $visibilite;
     protected $image;
+    protected $couleur;
     protected $codesecret;
     protected $type_id;
     protected $id_Utilisateur;

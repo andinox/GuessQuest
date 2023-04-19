@@ -17,12 +17,12 @@ class Score extends Model{
         return $tab;
     }
 
-    public static function getScoresByIdQuizAndUser($id_Quiz, $id_Utilisateur){
+    public static function getScoreByIdQuizAndUser($id_Quiz, $id_Utilisateur){
         $sql = "SELECT score FROM Scores WHERE id_Quiz = :id_Quiz && id_Utilisateur = :id_Utilisateur";
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_Quiz' => $id_Quiz, ':id_Utilisateur' => $id_Utilisateur));
         $tab = $req->fetchAll();
-        return $tab;
+        return $tab[0][0];
     }
 
 }
