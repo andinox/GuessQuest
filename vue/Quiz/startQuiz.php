@@ -1,15 +1,21 @@
 <div id="containerStartQuiz">
     <section id="sectionStartQuiz">
-        <div id="fondQuiz" style="<?php if (!empty($imgQuiz)) : ?>background-image: url('data:image/jpeg;base64,<?php echo base64_encode($imgQuiz);?>');<?php else : ?>background-color: <?php $couleurQuiz;?>; height: 15%<?php endif; ?>"></div>
+        <div id="fondQuiz" style="<?php if (!empty($imgQuiz)) : ?>background-image: url('data:image/jpeg;base64,<?php echo base64_encode($imgQuiz);?>');<?php else : ?>background-color: <?php $couleur;?>; height: 15%<?php endif; ?>"></div>
         <div id="mainStartQuiz">
             <div id="titreStartQuiz">
                 <h1><?php echo $titre; ?></h1>
             </div>
-            <div id="listeJoueurs">
-                <h2>Joueur(s) :</h2>
-                <ul>
-                    <li><img class="imgJoueur" src="data:image/jpeg;base64,<?php echo $imgUser; ?>" /><?php echo $pseudo; ?></li>
-                </ul>
+            <div id="containerJoueurScore">
+                <div id="listeJoueurs">
+                    <h2 class="lblJoueurScore">Joueur(s) :</h2>
+                    <ul>
+                        <li class="profilJoueur"><img class="imgJoueur" src="<?php echo $imgUser; ?>"/><?php echo $pseudo; ?></li>
+                    </ul>
+                </div>
+                <div id="scoreJoueur">
+                    <h2 class="lblJoueurScore">Votre score : </h2>
+                    <?php if(!empty($score)){echo "<p id='score-question'>".$score."</p>";}; ?>
+                </div>
             </div>
         </div>
     </section>

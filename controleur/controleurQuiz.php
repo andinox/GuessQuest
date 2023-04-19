@@ -29,18 +29,20 @@ class controleurQuiz {
         }
 
         $pseudo = $_SESSION["pseudo"];
-        $u = Utilisateur::getUtilisateurByPseudo($pseudo);
-        $idUser = $u->get("id_Utilisateur");
-        $imgUser = $u->get("image");
-        //Récupération des scores sur ce quiz
-        $scores = Score::getScoresByIdQuizAndUser($idQuiz,$idUser);
-        /*Tableau des scores sur ce quiz
-        $tabScores = array();
-        foreach($scores as $value){
-            $score = $value->get("score");
-            array_push($tabScores, $score);
-        }*/
 
+        if($_SESSION["TypeOfConn"] == "compte"){
+            $u = Utilisateur::getUtilisateurByPseudo($pseudo);
+            $idUser = $u->get("id_Utilisateur");
+            $imgUser = "data:image/jpeg;base64,";
+            $imgUser .= $u->get("image");
+            //Récupération du score sur ce quiz
+            $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
+            $score .= "/". count($tabTxtQuestions);
+        } else{
+            $imgUser = "./img/profil.png";
+        }
+        
+        //Récupération des informations sur le quiz
         $imgQuiz = $quiz->get("image");
         $couleurQuiz = $quiz->get("couleur");
 
