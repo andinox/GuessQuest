@@ -16,7 +16,6 @@ class Question extends Model{
         $tab = $req->fetchAll();
         return $tab;
     }
-
 }
 
 ?>

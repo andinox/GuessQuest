@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="./css/recuperation_mdp.css">
         <link rel="stylesheet" href="./css/newQuiz.css">
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/startQuiz.css">
         <link rel="stylesheet" href="./css/quiz.css">
         <link rel="stylesheet" href="./css/adminListeReport.css">
         <link rel="stylesheet" href="./css/homequiz.css">

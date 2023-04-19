@@ -1,127 +1,64 @@
-#containerStartQuiz {
+#mainContainerQuiz{
+    font-family: Raleway;
+}
+
+#containerQuizInfo{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    margin-bottom: 2%;
+}
+
+#info-quiz{
+    width: 90vw;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#containerQuiz {
     position: relative;
     top: 5%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-family: Raleway;
-    z-index: 3;
+    justify-content: flex-start;
     height: 90vh;
     width: 100vw;
     border-radius: 15px;
 }
 
-#sectionStartQuiz {
+#QuestionQuiz {
     background-color: #ffffff;
-    height: 60vh;
+    height: 30vh;
     width: 60vw;
     border-radius: 15px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
-
-#fondQuiz {
-    top: 0%;
-    width: 100%;
-    height: 30%;
-    background-color: #A16BFE; 
-    border-radius: 0px 15px 0px 0px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-#titreStartQuiz {
-    font-size: 1.5rem;
-    margin-top: 2%;
     text-align: center;
 }
+.imgQuestion{
+    max-width: 100%;
+    height: auto;
+}
 
-#mainStartQuiz {
+#sectionReponseQuiz{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 75%;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-#containerJoueurScore{
-    margin-top: 2%;
-    display: flex;
-    width: 100%
-}
-
-#listeJoueurs {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-top: 2%;
-    margin-left: 2%;
-}
-
-#scoreJoueur{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-top: 2%;
-    margin-left: 2%;
-}
-
-#score-question{
-    height: 100%;
-    margin-left: 5%;
-    font-size: 5rem;
-    text-align: center;
-}
-
-#listeJoueurs>ul {
-    list-style: none;
-}
-
-#listeJoueurs>ul>li {
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    font-size: 1.5rem;
-    background-color: rgb(236, 236, 236);
-    padding: 2% 3%;
-    margin: 2% 0;
-    border-radius: 15vw;
+    align-content: space-around;
+    height: 50vh;
+    width: 60vw;
 }
 
-.imgJoueur {
-    width: 15%;
-    border-radius: 100%;
-    overflow: hidden;
-    margin-right: 15px;
-    aspect-ratio: 1/1;
-}
-
-#menuBtnStartQuiz {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 20vw;
-    height: 100vh;
-}
-
-.btnStartQuiz {
-    margin: 2% 0;
+.btn-reponse{
+    text-align: center;
+    background-color: #ffffff;
+    height: 15vh;
+    width: 29vw;
+    border-radius: 15px;
     border: none;
-    font-size: 1.5rem;
-    color: #ffffff;
-    width: 15vw;
-    height: 10vh;
-    border-radius: 10px;
-}
-
-#startBtnStartQuiz {
-    background-color: #00dd00;
-}
-
-#exitBtnStartQuiz {
-    background-color: #e00000;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
 }
