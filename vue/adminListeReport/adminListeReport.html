@@ -1,12 +1,26 @@
 <div id="particles-js"></div>
-
-<div class="card-choix-report">
-    <?php
-        foreach($tabAff as $ligne) {
-            echo $ligne;
-        }
-    ?>
-</div>
+<section class="main carteS">
+    <img class="bg-logo" src="./img/logo_b.png">
+    <table>
+        <caption class="signalements">Liste des signalements</caption>
+        <thead>
+            <tr>
+                <td><b>ID</b></td>
+                <td><b>Quiz</b></td>    
+                <td><b>Créateur</b></td>
+                <td><b>Signalé par</b></td>
+                <td><b>Supprimer</b></td>
+            </tr>
+        </thead>
+        <tbody>     
+            <?php
+                foreach($tabAff as $ligne) {
+                    echo $ligne;
+                }
+            ?> 
+        </tbody>    
+     </table>
+</section>
 
 <script src="./assets/particles.js"></script>
 <script src="./assets/app.js"></script> 
