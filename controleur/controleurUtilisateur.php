@@ -11,7 +11,7 @@ class controleurutilisateur {
         include("./vue/footer.html");
     }
     
-    //recuperation du numUtilisateur par GET
+    //recuperation du nomUtilisateur par GET
     public static function sessionUtilisateur() {
         if (isset($_SESSION["pseudo"])) {
             return $_SESSION["pseudo"];
