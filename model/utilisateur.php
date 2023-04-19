@@ -67,6 +67,14 @@ class Utilisateur extends Model{
         return $tab[0][0];
     }
 
+    public static function getPseudoById_Utilisateur($id_utilisateur) {
+        $sql = "SELECT pseudo FROM Utilisateur WHERE id_utilisateur = :id_utilisateur";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':id_utilisateur' => $id_utilisateur));
+        $tab = $req->fetchAll();
+        return $tab[0][0];
+    }
+
 
     public static function getImgProfil($id_utilisateur) {
         $sql = "SELECT image FROM Utilisateur WHERE id_utilisateur = :id_utilisateur";

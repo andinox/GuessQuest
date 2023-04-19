@@ -1,0 +1,44 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-family: Raleway;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.signalements {
+    margin: 10px;
+    font-size: 20px;
+}
+.btn {
+    background-color: #7209B7;
+    color: white;
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+  
+.btn:hover {
+    background-color: #3e8e41;
+}
+@media only  screen  and (max-width: 400px) and (max-height: 700px) {
+    #particles-js {
+        display: none;
+    }
+    .carteS {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+}
