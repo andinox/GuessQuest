@@ -1,6 +1,7 @@
 <?php
 require_once ("./controleur/controleurUtilisateur.php");
 require_once ("./model/utilisateur.php");
+require_once ("./model/quiz.php");
 class controleurMesQuiz {
     public static function affiche() {
         $titre = "Mes Quiz";
@@ -12,7 +13,7 @@ class controleurMesQuiz {
                 $id = Utilisateur::getId_UtilisateurByPseudo($name);
                 $img = Utilisateur::getImgProfil($id);
                 $data = "data:image/png;base64,$img";
-                $quiz = [];
+                $quiz = Quiz::getQuizByUserId($id);
             } else {
                 header("Location: index.php?controleur=controleurconnexion&action=afficheConnexion");
             }

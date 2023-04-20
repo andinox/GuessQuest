@@ -23,13 +23,14 @@
 }
 
 .list-qz {
+    overflow-y: scroll;
     border-top: 1px solid rgba(0, 0, 0, 0.36);
     border-bottom: 1px solid rgba(0, 0, 0, 0.36);
     width: 90%;
     height: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -64,4 +65,34 @@
 }
 .pdp img {
     height: 100%;
+}
+
+
+.quiz_ {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 90%;
+    min-height: 15%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.quiz_ .bg{
+    background: var(--color);
+    height: 100%;
+    width: 25%;
+    clip-path: polygon(64% 0, 100% 50%, 61% 100%, 0 100%, 0 0);
+}
+
+.quiz_ a {
+    text-decoration: none;
+    color: black;
+    font-family: Raleway;
+    font-size: 1rem;
+    justify-content: center;
+    margin: 0 auto;
 }

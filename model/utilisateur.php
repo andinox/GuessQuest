@@ -50,6 +50,9 @@ class Utilisateur extends Model{
         return $tab[0];
     }
 
+
+
+
     //update mot de passe de l'utilisateur
     public static function updateMdp($id_utilisateur, $mdp) {
         $sql = "UPDATE Utilisateur SET mdp = :mdp WHERE id_utilisateur = :id_utilisateur";
@@ -86,9 +89,12 @@ class Utilisateur extends Model{
 
 
     public static function ajouteQuizz($id_utilisateur){
-        $sql = "INSERT INTO `quiz` (`titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) VALUES ('NouveauQuiz', :Date, '0', '', NULL, NULL, '1', :id_utilisateur)";
+        $sql = "INSERT INTO `quiz` (`titreQuiz`, `dateCreation`, `visibilite`, `image`,`couleur`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) VALUES ('NouveauQuiz', :Date, '0', '','#A16BFE', NULL, NULL, '1', :id_utilisateur)";
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':Date' => date("Y-m-d")));
+        $id_quiz = Connexion::pdo()->lastInsertId();
+
+        return $id_quiz;
     }
 
     public static function getId_QuestionRecupByPseudo($pseudo) {
