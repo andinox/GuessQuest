@@ -89,7 +89,6 @@ class controleurQuiz {
 
         //Récupération du quiz par l'id
         $quiz = Quiz::getQuizById($idQuiz);
-        $titreQuiz = $quiz->get("titreQuiz");
         $titre = $quiz->get("titreQuiz");
         //Récupération des questions par l'id du quiz ($questions = un tableau de question)
         $questions = Question::getQuestionsByIdQuiz($idQuiz);
@@ -106,13 +105,19 @@ class controleurQuiz {
             $u = Utilisateur::getUtilisateurByPseudo($pseudo);
             $idUser = $u->get("id_Utilisateur");
             $imgUser = $u->get("image");
-            $imgData = "data:image/png;base64," . base64_encode($imgUser);
+            $imgUser = "data:image/png;base64," . base64_encode($imgUser);
+
             //Récupération du score sur ce quiz
             $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
             $score .= "/". count($tabTxtQuestions);
         } else{
-            $imgData = "./img/profil.png";
+            $imgUser = "./img/profil.png";
         }
+        
+        //Récupération des informations sur le quiz
+        $imgQuiz = $quiz->get("image");
+        $imgData = "data:image/png;base64," . base64_encode($imgQuiz);
+        $couleurQuiz = $quiz->get("couleur");
 
         include("./vue/debut.php");
         include("./vue/Quiz/endQuiz.php");

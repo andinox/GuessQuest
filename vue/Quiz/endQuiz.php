@@ -9,7 +9,7 @@
                 <div id="listeJoueurs">
                     <h2 class="lblJoueurScore">Joueur(s) :</h2>
                     <ul>
-                        <li class="profilJoueur"><img class="imgJoueur" src="<?php echo $imgData; ?>"/><?php echo $pseudo; ?></li>
+                        <li class="profilJoueur"><img class="imgJoueur" src="<?php echo $imgUser; ?>"/><?php echo $pseudo; ?></li>
                     </ul>
                 </div>
                 <div id="scoreJoueur">
