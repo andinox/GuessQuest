@@ -16,12 +16,13 @@ class controleurMain {
                 $data = "data:image/png;base64," . base64_encode($img);
                 $lesQuiz = quiz::getQuiz();
                 foreach ($lesQuiz as $key) {
+                    $idQuiz = $key->get('id_Quiz');
                     $titreQuiz = $key->get('titreQuiz');
                     $imgQuiz = $key->get('image');
                     $imgData = "data:image/png;base64," . base64_encode($imgQuiz);
-                    $quizBtn = "<button class=\"btn-img-quiz\"><img src=\"$imgData\" class=\"quiz-image\"></button>";
-                    //$supprimerBtn = '<form method="post" action="./index.php?controleur=controleurAdminListeReport&action=supprimerQuiz"><input type="hidden" name="idQuiz" value="'.$idQuiz.'"><button class="btn" type="submit">'."❌".'</button></form>';
-                    $tabAff[] = "<button class=\"btn-img-quiz\"><img src=\"$imgData\" class=\"quiz-image\"></button>";
+
+                    $quizBtn = '<form method="post" action="./index.php?controleur=controleurQuiz&???"><input type="hidden" name="idQuiz" value="'.$idQuiz.'"><button class="btn-img-quiz" type="submit">'."<img src=\"$imgData\" class=\"quiz-image\"><p class=\"titre-quiz-btn\">TITRE</p>".'</button></form>';
+                    $tabAff[] = $quizBtn;
                 }
                 
             } else {

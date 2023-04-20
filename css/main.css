@@ -11,9 +11,24 @@
     border-radius: 15px;
 
 }
+.titre-quiz-btn {
+    font-size: 12px;
+    font-family: Raleway;
+}
+
+.btn-img-quiz:hover {
+    background-color: #b935ca;
+    color: #fff;
+    box-shadow: 2px 2px 5px #888;
+    transition: background-color 0.5s ease;
+    transform: scale(1.2);
+
+}
 
 .btn-img-quiz {
-    width: 1px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
 }
   
 .top-bar {
