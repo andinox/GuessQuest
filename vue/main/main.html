@@ -2,7 +2,7 @@
 <section class="main carteS">
     <header class="top-bar">
         <div class="profil-img">
-            <img src="<?php echo $data?>">
+            <img src="<?php echo $data ?>">
         </div>
         <div class="bando">
             <div class="pseudo-n">
@@ -25,6 +25,7 @@
         </div>
     </header>
     <section class="quizz-l">
+        <!--<div class="quizz-b"></div>
         <div class="quizz-b"></div>
         <div class="quizz-b"></div>
         <div class="quizz-b"></div>
@@ -32,8 +33,12 @@
         <div class="quizz-b"></div>
         <div class="quizz-b"></div>
         <div class="quizz-b"></div>
-        <div class="quizz-b"></div>
-        <div class="quizz-b"></div>
+        <div class="quizz-b"></div>-->
+        <?php
+            foreach($tabAff as $ligne) {
+                echo $ligne;
+            }
+        ?>
     </section>
     <img class="bg-logo" src="./img/logo_b.png">
 </section>

@@ -22,7 +22,7 @@ class controleurAdminListeReport {
             $pseudoCreateur = '<form method="post" action="./???.php"><input type="hidden" name="idCreateur" value="'.$idCreateur.'"><button class="btn" type="submit">'.utilisateur::getPseudoById_Utilisateur($idCreateur).'</button></form>';   
             $pseudoSignaleur = '<form method="post" action="./???.php"><input type="hidden" name="idSignaleur" value="'.$idSignaleur.'"><button class="btn" type="submit">'.utilisateur::getPseudoById_Utilisateur($idSignaleur).'</button></form>';   
             $supprimerBtn = '<form method="post" action="./index.php?controleur=controleurAdminListeReport&action=supprimerQuiz"><input type="hidden" name="idQuiz" value="'.$idQuiz.'"><button class="btn" type="submit">'."❌".'</button></form>';
-            $tabAff[] = "<tr><td>$idReport</td><td>$titreQuiz</td><td>$pseudoCreateur</td><td>$pseudoSignaleur</td><td>$supprimerBtn</td></tr>";
+            $tabAff[] = "<tr><td class='tHeadItems'>$idReport</td><td class='tHeadItems'>$titreQuiz</td><td class='tHeadItems'>$pseudoCreateur</td><td class='tHeadItems'>$pseudoSignaleur</td><td class='tHeadItems'>$supprimerBtn</td></tr>";
 
         }
         include("./vue/debut.php");
@@ -32,7 +32,7 @@ class controleurAdminListeReport {
 
     public static function supprimerQuiz(){
         $id_Quiz = $_POST['idQuiz'];
-        quiz::deleteQuizReportedById_Quiz($id_Quiz);
+        signalement::deleteReportById_Quiz($id_Quiz);
         quiz::deleteQuizById_Quiz($id_Quiz);
         self::affiche();
         
