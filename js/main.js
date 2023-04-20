@@ -1,4 +1,11 @@
+
 var bandoDiv = document.querySelector(".bando")
+$(".name-btn").click(() => {
+    $(".menu-p").toggle()
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    var bandoDiv = document.querySelector(".bando")
 var listeReportBtn = document.createElement("BUTTON");
 var t = document.createTextNode("🚨");
 
