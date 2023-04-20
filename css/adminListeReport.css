@@ -1,20 +1,17 @@
-table {
+.tableReport {
     border-collapse: collapse;
     width: 100%;
     position: absolute;
     text-align: center;
     font-family: Raleway;
 }
-th, td {
+.tHeadItems {
     text-align: left;
     padding: 8px;
     border: 2px solid black;
     border-radius: 25px;
 }
-th {
-    background-color: #4CAF50;
-    color: white;
-}
+
 .signalements {
     margin: 10px;
     font-size: 20px;
