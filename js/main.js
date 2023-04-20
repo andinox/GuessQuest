@@ -1,7 +1,4 @@
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var bandoDiv = document.querySelector(".bando")
+var bandoDiv = document.querySelector(".bando")
 var listeReportBtn = document.createElement("BUTTON");
 var t = document.createTextNode("🚨");
 
@@ -16,4 +13,4 @@ listeReportBtn.classList.add("report-btn");
 // Ajouter le bouton à la div "bando"
 // If(monId == 1) / If(je suis admin)
 bandoDiv.appendChild(listeReportBtn);
-});
+

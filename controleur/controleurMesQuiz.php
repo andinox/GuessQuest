@@ -12,8 +12,9 @@ class controleurMesQuiz {
                 $name = $_SESSION["pseudo"];
                 $id = Utilisateur::getId_UtilisateurByPseudo($name);
                 $img = Utilisateur::getImgProfil($id);
-                $data = "data:image/png;base64,$img";
-                $quiz = Quiz::getQuizByUserId($id);
+                $data = "data:image/png;base64," . base64_encode($img);
+
+                    
             } else {
                 header("Location: index.php?controleur=controleurconnexion&action=afficheConnexion");
             }
