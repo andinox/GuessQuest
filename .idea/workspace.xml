@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9631b8-8a1d-4013-816a-dc7beebc6279" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurMesQuiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurMesQuiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurNewQuiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurNewQuiz.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controleur/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/homequiz.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/homequiz.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/newQuiz.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/newQuiz.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app_quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app_quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/mesquiz/homequiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue/mesquiz/homequiz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/new_quiz/section.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue/new_quiz/section.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +87,8 @@
       <workItem from="1681737015719" duration="14076000" />
       <workItem from="1681806204512" duration="5100000" />
       <workItem from="1681821817744" duration="12663000" />
-      <workItem from="1681929948981" duration="54000" />
+      <workItem from="1681929948981" duration="1304000" />
+      <workItem from="1682018095178" duration="12918000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,5 @@
+
+
 <?php
 require_once ("./config/connexion.php");
 Connexion::connect();
@@ -5,7 +7,7 @@ $controleur = "controleurConnexion";
 $action = "afficheConnexion";
 
 $tableauControleur = ["controleurQuiz", "controleurNewQuiz","controleurConnexion","controleurHome","controleurContact","controleurRecuperationMdp","controleurProfil",
-"controleurInvite","controleurCreationCompte","controleurModifMdp","controleurConnexionTest","controleurMain","controleurMesQuiz","controleurAdminListeReport"];
+    "controleurInvite","controleurCreationCompte","controleurModifMdp","controleurConnexionTest","controleurMain","controleurMesQuiz","controleurAdminListeReport"];
 $actionParDefaut = array (
     "controleurMesQuiz" => "affiche",
     "controleurQuiz" => "afficheStart",
@@ -38,4 +40,3 @@ if (isset($_GET["action"]) && in_array($_GET["action"],get_class_methods($contro
 
 $controleur::$action();
 ?>
-

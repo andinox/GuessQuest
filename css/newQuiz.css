@@ -40,12 +40,16 @@ body {
     top: 0%;
     width: 100%;
     height: 40%;
-    background-color:#A16BFE;
+    background-color: var(--color);
     border-radius: 0px 15px 0px 0px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.quizz form {
+    display: none;
 }
 
 .quizz {

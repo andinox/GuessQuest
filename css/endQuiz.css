@@ -1,0 +1,115 @@
+#containerEndQuiz {
+    position: relative;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Raleway;
+    z-index: 3;
+    height: 90vh;
+    width: 100vw;
+    border-radius: 15px;
+}
+
+#sectionEndQuiz {
+    background-color: #ffffff;
+    height: 60vh;
+    width: 60vw;
+    border-radius: 15px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#titreEndQuiz {
+    font-size: 1.5rem;
+    margin-top: 2%;
+    text-align: center;
+}
+
+#mainEndQuiz {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 75%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#containerJoueurScore{
+    margin-top: 2%;
+    display: flex;
+    width: 100%
+}
+
+#listeJoueurs {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+#scoreJoueur{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+#score-question{
+    height: 100%;
+    margin-left: 5%;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#listeJoueurs>ul {
+    list-style: none;
+}
+
+#listeJoueurs>ul>li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    font-size: 1.5rem;
+    background-color: rgb(236, 236, 236);
+    padding: 2% 3%;
+    margin: 2% 0;
+    border-radius: 15vw;
+}
+
+.imgJoueur {
+    width: 15%;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 15px;
+    aspect-ratio: 1/1;
+}
+
+#menuBtnEndQuiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20vw;
+    height: 100vh;
+}
+
+.btnEndQuiz {
+    margin: 2% 0;
+    border: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+    width: 15vw;
+    height: 10vh;
+    border-radius: 10px;
+}
+
+#scoreBtnEndQuiz {
+    background-color: #dda900;
+}
+
+#exitBtnEndQuiz {
+    background-color: #e00000;
+}

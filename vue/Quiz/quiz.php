@@ -11,10 +11,6 @@
             <!--<img class="imgQuestion" src="data:image/jpeg;base64,..."/>-->
         </div>
         <div id="sectionReponseQuiz">
-            <button class="btn-reponse"><p>Reponse 1 :</p></button>
-            <button class="btn-reponse"><p>Reponse 2 :</p></button>
-            <button class="btn-reponse"><p>Reponse 3</p></button>
-            <button class="btn-reponse"><p>Reponse 4</p></button>
         </div>
     </div>
 </section>
