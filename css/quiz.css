@@ -1,3 +1,7 @@
+#idQuiz{
+    display: none;
+}
+
 #mainContainerQuiz{
     font-family: Raleway;
 }
@@ -61,4 +65,12 @@
     border-radius: 15px;
     border: none;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+}
+
+.correct{
+    background: linear-gradient(32deg, rgba(11,223,36)0%, rgba(41,232,111)100%);
+}
+
+.incorrect{
+    background: linear-gradient(32deg, rgba(230,29,29)0%, rgba(224,11,11)100%);
 }

@@ -62,7 +62,7 @@ class controleurQuiz {
 
         //Récupération du quiz par l'id
         $quiz = Quiz::getQuizById($idQuiz);
-        $titre = $quiz->get("titreQuiz");
+        $titreQuiz = $quiz->get("titreQuiz");
         //Récupération des questions par l'id du quiz ($questions = un tableau de question)
         $questions = Question::getQuestionsByIdQuiz($idQuiz);
         //Tableau avec les textes et les id des questions
