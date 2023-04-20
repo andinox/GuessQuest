@@ -32,7 +32,7 @@ class controleurAdminListeReport {
 
     public static function supprimerQuiz(){
         $id_Quiz = $_POST['idQuiz'];
-        quiz::deleteQuizReportedById_Quiz($id_Quiz);
+        signalement::deleteReportById_Quiz($id_Quiz);
         quiz::deleteQuizById_Quiz($id_Quiz);
         self::affiche();
         

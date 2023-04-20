@@ -5,6 +5,17 @@
 }
 
 
+.quiz-image {
+    height: 200px;
+    max-width: 350px;
+    border-radius: 15px;
+
+}
+
+.btn-img-quiz {
+    width: 1px;
+}
+  
 .top-bar {
     position: absolute;
     top: 0;
@@ -190,10 +201,13 @@
 }
 
 .quizz-l > * {
-    flex: 0 0 30%;
-    background: rgb(0, 0, 0);
-    height: 20%;
-    border-radius: 15px;
+    flex: 1 1 auto;
+    background: rgb(255, 255, 255);
+    height: 200px;
+    max-width: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    border-color: #ffffff;
 }
 
 @media only  screen  and (max-width: 400px) and (max-height: 700px) {
