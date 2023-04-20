@@ -46,6 +46,7 @@ class controleurQuiz {
         
         //Récupération des informations sur le quiz
         $imgQuiz = $quiz->get("image");
+        $imgData = "data:image/png;base64," . base64_encode($imgQuiz);
         $couleurQuiz = $quiz->get("couleur");
 
         include("./vue/debut.php");
@@ -104,13 +105,13 @@ class controleurQuiz {
         if($_SESSION["TypeOfConn"] == "compte"){
             $u = Utilisateur::getUtilisateurByPseudo($pseudo);
             $idUser = $u->get("id_Utilisateur");
-            $imgUser = "data:image/jpeg;base64,";
-            $imgUser .= $u->get("image");
+            $imgUser = $u->get("image");
+            $imgData = "data:image/png;base64," . base64_encode($imgUser);
             //Récupération du score sur ce quiz
             $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
             $score .= "/". count($tabTxtQuestions);
         } else{
-            $imgUser = "./img/profil.png";
+            $imgData = "./img/profil.png";
         }
 
         include("./vue/debut.php");

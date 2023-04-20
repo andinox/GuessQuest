@@ -1,7 +1,7 @@
 <div id="particles-js"></div>
 <div id="containerProfil">
     <!--Passage du BLOB en base64-->
-    <img id="imgProfil" class="profil-img" src="data:image/jpeg;base64,<?php echo $pp; ?>"/>
+    <img id="imgProfil" class="profil-img" src="data:image/jpeg;base64,<?php echo $imgData; ?>"/>
     <section id="mainProfil">  
         <h1 id="pseudoProfil"><?php echo $pseudo ?></h1>
         <div id="div_mdp">
