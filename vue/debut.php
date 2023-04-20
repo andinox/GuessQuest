@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/startQuiz.css">
         <link rel="stylesheet" href="./css/quiz.css">
+        <link rel="stylesheet" href="./css/endQuiz.css">
         <link rel="stylesheet" href="./css/adminListeReport.css">
         <link rel="stylesheet" href="./css/homequiz.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">

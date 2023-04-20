@@ -1,4 +1,5 @@
 var titreQuiz;
+var idQuizVal;
 var score = 0;
 var questionIndex = 0;
 var tabQuestionReponse;
@@ -6,22 +7,20 @@ var txtQuestion;
 var btnReponse;
 var reponseCorrect;
 
+
+
 $(document).ready(function() {
     titreQuiz = $("#titreQuiz");
     txtQuestion = $("#txtQuestion");
-    btnReponse = $('.btn-reponse');
-
     preStartQuiz();
 });
 
+
+
+
 preStartQuiz = () => {
     var idQuiz = $("#idQuiz");
-    var idQuizVal = idQuiz.text();
-    // Le tableau que retourne cette fonction
-    var tab = [];
-    // Le score de ce quiz de l'utilisateur
-    var score = 0;
-
+    idQuizVal = idQuiz.text();
 
     //Transmettre l'idQuiz par la méthode $_GET dans l'api
     const url ="./api/playQuiz.php?idQuiz=" + encodeURIComponent(idQuizVal);
@@ -36,41 +35,40 @@ preStartQuiz = () => {
         // Une copie du tableau pour pouvoir le manipuler à notre guise
         var questions = [...data];
         newQuestion(questions);
-        addEcouteurBtn(questions)
 
     })
     .catch(error => {console.error(error)});
 }
 
+
+
+
 newQuestion = (questions) => {
-        // Si il n'y a plus de question on va à la page de fin    
-        if(questionIndex >= questions.length){
-            window.location.href = "index.php?controleur=controleurQuiz&action=afficheFinQuiz";
-        }
 
-        // La question actuelle 
-        var question = questions[questionIndex];
-        console.log(question['reponseCorrect'])
-        // La bonne réponse 
-        var reponseCorrect = question['reponseCorrect'];
+    console.log(questions)
+    console.log(questionIndex)
 
-        // On change le champ de texte par la question
-        txtQuestion.text(question.textQuestion);
+    // La question actuelle 
+    var question = questions[questionIndex];
 
-        // Pour parcourir les btn
-        var index = 0;
-        // On change le champ de texte des réponses
-        btnReponse.each(function() {
-            $(this).text(question["reponse"+index]);
-            // Si l'index est le même que la reponseCorrect dans data alors on lui ajoute un data-id pour l'a reconnaître lors du clic
-            if(index === reponseCorrect){
-                $(this).attr('data-id', '1');
-            }
-            index++;
-        });
-        // Pour passer à la question suivante
-        questionIndex++;
+    // On change le champ de texte par la question
+    txtQuestion.text(question.textQuestion);
+    
+    // On met à zéro tous les attributs "data-id" de tous les boutons
+    addBtnReponse(question);
+
+    // Changement des champs de texte des boutons réponses
+    changeTxtBtn(question);
+
+    // On ajoute les écouteurs d'évènements
+    addEcouteurBtn(questions);
+    
+    // Pour passer à la question suivante
+    questionIndex++;
 }
+
+
+
 
 //Ajout des écouteurs sur les boutons
 addEcouteurBtn = (questions) => {
@@ -89,7 +87,56 @@ addEcouteurBtn = (questions) => {
 
         setTimeout(() => {
             $(this).removeClass(classAdd);
-            newQuestion(questions);
+            // Si il n'y a plus de question on va à la page de fin de quiz   
+            if(questionIndex >= questions.length){
+                window.location.href = "index.php?controleur=controleurQuiz&action=afficheEndQuiz";
+            }else {
+                //Suppression des button pour les re-construire dans la question suivante
+                $("#sectionReponseQuiz .btn-reponse").remove();
+                //Lancer la nouvelle question
+                newQuestion(questions);
+            }
         }, 1000)
     }); 
-}    
+}
+
+
+
+
+changeTxtBtn = (question) => {
+    // L'index de la bonne réponse 
+    let reponseCorrect = question['reponseCorrect'];
+    let index = 0;
+
+    // On change le champ de texte des réponses
+    $('.btn-reponse').each(function() {
+        $(this).text(question["reponse"+index]);
+        // Si l'index est le même que la reponseCorrect dans data alors on lui ajoute un data-id pour l'a reconnaître lors du clic
+        if(index == reponseCorrect){
+            // On associe 1 à l'attribut data-id du button pour le remarquer des autres
+            $(this).attr('data-id', '1');
+        }else {
+            $(this).attr('data-id', '0');
+        }
+        index++;
+    });
+}
+
+
+
+
+
+addBtnReponse = (question) => {
+    // Récupérer les clés du tableau question
+    let keys = Object.keys(question);
+
+    // Parcourir les clés et vérifier si elles correspondent au format "reponse+index"
+    keys.forEach(key => {
+        // Si les clés commence par reponse et suivi d'un ou plusieurs nombres
+        if (key.match(/^reponse\d+$/)) {
+            $("#sectionReponseQuiz").append("<button class='btn-reponse'></button>");
+        }
+    });
+}
+
+

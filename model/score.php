@@ -25,6 +25,12 @@ class Score extends Model{
         return $tab[0][0];
     }
 
+    public static function setScoreByIdQuizAndUser($id_Quiz, $id_Utilisateur, $score){
+        $sql = "UPDATE `scores` SET `score` = :score WHERE id_Quiz = :id_Quiz && id_Utilisateur = :id_Utilisateur;";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':id_Quiz' => $id_Quiz, ':id_Utilisateur' => $id_Utilisateur, ':score' => $score));
+    }
+
 }
 
 ?>
