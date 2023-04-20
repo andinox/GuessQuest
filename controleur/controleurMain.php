@@ -21,7 +21,7 @@ class controleurMain {
                     $imgQuiz = $key->get('image');
                     $imgData = "data:image/png;base64," . base64_encode($imgQuiz);
 
-                    $quizBtn = '<form method="post" action="./index.php?controleur=controleurQuiz&???"><input type="hidden" name="idQuiz" value="'.$idQuiz.'"><button class="btn-img-quiz" type="submit">'."<img src=\"$imgData\" class=\"quiz-image\"><p class=\"titre-quiz-btn\">TITRE</p>".'</button></form>';
+                    $quizBtn = '<form method="post" action="./index.php?controleur=controleurQuiz&action=afficheStart"><input type="hidden" name="identifiant" value="'.$idQuiz.'"><button class="btn-img-quiz" type="submit">'."<img src=\"$imgData\" class=\"quiz-image\"><b class=\"titre-quiz-btn\" style=\"text-transform:uppercase\" >$titreQuiz</b>".'</button></form>';
                     $tabAff[] = $quizBtn;
                 }
                 
