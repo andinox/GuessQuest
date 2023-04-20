@@ -10,8 +10,8 @@ class controleurQuiz {
 
     public static function afficheStart(){
 
-        if (isset($_GET["idQuiz"])) {
-            $idQuiz = $_GET["idQuiz"];
+        if (isset($_POST["idQuiz"])) {
+            $idQuiz = $_POST["idQuiz"];
         }
         else{
             $idQuiz = 1;
