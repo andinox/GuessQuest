@@ -1,4 +1,6 @@
-
+$(".name-btn").click(() => {
+    $(".menu-p").toggle()
+})
 
 document.addEventListener('DOMContentLoaded', function() {
     var bandoDiv = document.querySelector(".bando")
