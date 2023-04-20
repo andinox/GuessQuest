@@ -34,14 +34,14 @@ class controleurQuiz {
         if($_SESSION["TypeOfConn"] == "compte"){
             $u = Utilisateur::getUtilisateurByPseudo($pseudo);
             $idUser = $u->get("id_Utilisateur");
-            $imgQuiz = $u->get("image");
-            $imgData = "data:image/png;base64," . base64_encode($imgQuiz);
+            $imgUser = $u->get("image");
+            $imgUser = "data:image/png;base64," . base64_encode($imgUser);
 
             //Récupération du score sur ce quiz
             $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
             $score .= "/". count($tabTxtQuestions);
         } else{
-            $imgData = "./img/profil.png";
+            $imgUser = "./img/profil.png";
         }
         
         //Récupération des informations sur le quiz
