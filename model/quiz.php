@@ -27,6 +27,15 @@ class Quiz extends Model{
         return $tab[0];
     }
 
+    public static function getQuiz(){
+        $sql = "SELECT * FROM Quiz";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->setFetchMode(PDO::FETCH_CLASS, 'Quiz');
+        $req->execute();
+        $tab = $req->fetchAll();
+        return $tab;
+    }
+
     public static function getTitreById_Quiz($id_Quiz) {
         $sql = "SELECT titreQuiz FROM Quiz WHERE id_Quiz = :id_Quiz";
         $req = Connexion::pdo()->prepare($sql);
@@ -49,12 +58,6 @@ class Quiz extends Model{
         $req->execute(array(':id_Quiz' => $id_Quiz));
         $tab = $req->fetchAll();
         return $tab[0][0];
-    }
-
-    public static function deleteQuizReportedById_Quiz($id_Quiz){
-        $sql = "DELETE FROM Signalement WHERE id_Quiz = :id_Quiz";
-        $req = Connexion::pdo()->prepare($sql);
-        $req->execute(array(':id_Quiz' => $id_Quiz));
     }
 
     public static function deleteQuizById_Quiz($id_Quiz){

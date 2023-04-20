@@ -89,7 +89,7 @@ class Utilisateur extends Model{
 
 
     public static function ajouteQuizz($id_utilisateur){
-        $sql = "INSERT INTO `quiz` (`titreQuiz`, `dateCreation`, `visibilite`, `image`,`couleur`, `codesecret`, `numQuestion`, `type_id`, `id_Utilisateur`) VALUES ('NouveauQuiz', :Date, '0', '','#A16BFE', NULL, NULL, '1', :id_utilisateur)";
+        $sql = "INSERT INTO `quiz` (`titreQuiz`, `dateCreation`, `visibilite`, `image`, `codesecret`, `type_id`, `id_Utilisateur`) VALUES ('NouveauQuiz', :Date, '0', '', NULL, NULL, '1', :id_utilisateur)";
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':Date' => date("Y-m-d")));
         $id_quiz = Connexion::pdo()->lastInsertId();

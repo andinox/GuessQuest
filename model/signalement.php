@@ -14,6 +14,11 @@ class Signalement extends Model {
         return $tab;
     }
 
+    public static function deleteReportById_Quiz($id_Quiz){
+        $sql = "DELETE FROM Signalement WHERE id_Quiz = :id_Quiz";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':id_Quiz' => $id_Quiz));
+    }
 
 }
 
