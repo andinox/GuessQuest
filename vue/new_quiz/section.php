@@ -1,10 +1,13 @@
 <div id="particles-js"></div>
 <section class="main">
     <section class="question">
-        <div class="no-q" id="no-q" style="display: none;">
+        <div class="no-q" id="no-q" style="">
             <p>Pas de question sélectionnée</p>
             <div id="add-q-o">
                 <i class="bi bi-plus-lg"></i>
+            </div>
+            <div>
+                
             </div>
         </div>
     </section>
@@ -25,7 +28,6 @@
             </div>
         </div>
         <div class="q-list" id="q-list">
-            <div class="q-div-btn none" id="template">
             <div class="q-div-btn none" id="template">
                 <div class="img-q-list"></div>
                 <div class="img-q-list d"></div>
