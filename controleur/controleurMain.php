@@ -13,7 +13,7 @@ class controleurMain {
             if ($_SESSION["TypeOfConn"] == "compte") {
                 $id = Utilisateur::getId_UtilisateurByPseudo($name);
                 $img = Utilisateur::getImgProfil($id);
-                $data = "data:image/png;base64," . base64_encode($img);
+                $data = "data:image/png;base64,". $img;
                 $lesQuiz = quiz::getQuiz();
                 foreach ($lesQuiz as $key) {
                     $idQuiz = $key->get('id_Quiz');

@@ -6,14 +6,12 @@ class controleurMesQuiz {
     public static function affiche() {
         $titre = "Mes Quiz";
         if (controleurutilisateur::sessionUtilisateur()) {
+            $name = $_SESSION["pseudo"];
+            $data = "./img/profil.png";
             if ($_SESSION["TypeOfConn"] == "compte") {
-                $use = "";
-                $data = "./img/profil.png";
-                $name = $_SESSION["pseudo"];
                 $id = Utilisateur::getId_UtilisateurByPseudo($name);
                 $img = Utilisateur::getImgProfil($id);
-                $data = "data:image/png;base64," . base64_encode($img);
-
+                $data = "data:image/png;base64,". $img;
                     
             } else {
                 header("Location: index.php?controleur=controleurconnexion&action=afficheConnexion");
