@@ -103,7 +103,7 @@ addEcouteurBtn = (questions) => {
                 // On augment la progress bar 
                 let pourcentage = (questionIndex/questions.length)*100;
                 pourcentageArrondi = Math.round(pourcentage);
-                progressBar.attr('data-progess', pourcentageArrondi+"%");
+                progressBar.attr('data-progress', pourcentageArrondi+"%");
 
                 //Suppression des button pour les re-construire dans la question suivante
                 $("#sectionReponseQuiz .btn-reponse").remove();
