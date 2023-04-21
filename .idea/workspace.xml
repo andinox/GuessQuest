@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9631b8-8a1d-4013-816a-dc7beebc6279" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app_quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app_quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleurMesQuiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleurMesQuiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utilisateur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/new_quiz/section.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/new_quiz/section.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,8 @@
       <workItem from="1681806204512" duration="5100000" />
       <workItem from="1681821817744" duration="12663000" />
       <workItem from="1681929948981" duration="1304000" />
-      <workItem from="1682018095178" duration="13828000" />
+      <workItem from="1682018095178" duration="15894000" />
+      <workItem from="1682071361390" duration="1835000" />
     </task>
     <servers />
   </component>

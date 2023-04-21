@@ -13,6 +13,7 @@ class controleurMesQuiz {
                 $img = Utilisateur::getImgProfil($id);
                 // $data = "data:image/png;base64,". $img;
                 // Echanger ces 2 lignes si vous voyez la photo de profil bugué
+                $quiz = Quiz::getQuizByUserId($id);
                 $data = "data:image/png;base64,". base64_encode($img);
                     
             } else {

@@ -1,14 +1,17 @@
 <div id="particles-js"></div>
 <section class="main">
     <section class="question">
-        <div class="no-q" id="no-q" style="">
+        <div class="no-q" id="no-q" style="display: none">
             <p>Pas de question sélectionnée</p>
             <div id="add-q-o">
                 <i class="bi bi-plus-lg"></i>
             </div>
-            <div>
-                
-            </div>
+            <section>
+                <input type="text">
+                <div>
+                    <i class="bi bi-plus-lg"></i>
+                </div>
+            </section>
         </div>
     </section>
     <section class="quizz">
