@@ -83,7 +83,7 @@
     width: 29vw;
     border-radius: 15px;
     border: none;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .btn-reponse:hover{
@@ -122,4 +122,52 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+}
+
+.quiz-q-a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.add-r {
+    background: white;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.add-r i {
+    font-size: 1.1rem;
+}
+
+.add-r:hover {
+    cursor: pointer;
+}
+
+.input-r {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-r:focus {
+    outline: none;
+}
+
+.rep {
+    padding: 10px;
+    background: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.none {
+    display: none;
 }

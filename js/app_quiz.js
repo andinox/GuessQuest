@@ -1,5 +1,7 @@
 const inputElement = $('input[type="file"]');
 const imageColorElement = $('#image-color');
+
+
 let nb_question = 0;
 first = true;
 
@@ -94,6 +96,14 @@ $(".input-n").on('focusout',function () {
 })
 
 
+$(".add-r").click(() => {
+    t = $(".patern").clone(true)
+    t.removeClass("none")
+    t.removeClass("patern")
+    t.appendTo($(".quiz-q-a"))
+})
+
+
 
 
 add_q = (event) => {
@@ -143,6 +153,7 @@ inputElement.on("change", (event) => {
 
 
 document.getElementById("add-q-o").addEventListener("click", (e) => {
+    $(".quiz-q-a").removeClass("none")
     document.getElementById("no-q").remove();
     first = false;
     add_q(e)

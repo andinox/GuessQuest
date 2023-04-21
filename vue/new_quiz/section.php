@@ -1,18 +1,22 @@
 <div id="particles-js"></div>
 <section class="main">
     <section class="question">
-        <div class="no-q" id="no-q" style="display: none">
+        <div class="no-q" id="no-q" style="">
             <p>Pas de question sélectionnée</p>
             <div id="add-q-o">
                 <i class="bi bi-plus-lg"></i>
             </div>
-            <section>
-                <input type="text">
-                <div>
-                    <i class="bi bi-plus-lg"></i>
-                </div>
-            </section>
         </div>
+
+        <section class="quiz-q-a none">
+            <input class="input-r" type="text" placeholder="question">
+            <div class="add-r">
+                <i class="bi bi-plus-lg"></i>
+            </div>
+            <div class="rep none patern">
+                <input class="rep-t" type="text" placeholder="reponse">
+            </div>
+        </section>
     </section>
     <section class="quizz">
         <div id="image-color" class="image-color" style="--color:<?php echo $quiz->getCouleur() ?>">
