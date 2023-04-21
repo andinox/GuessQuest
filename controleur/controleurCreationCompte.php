@@ -33,7 +33,7 @@ class controleurCreationCompte
                 // Enregistrer l'image dans la base de données
                 $imageProfil2 = file_get_contents($_FILES['image']['tmp_name']);
                 $imageProfil2 = base64_encode($imageProfil2);
-
+                
                 // Ajouter le nouvel utilisateur
                 Utilisateur::ajouteUtilisateur($pseudo, $mdp, $reponse, $imageProfil2, $id_QuestionRecup);
                 header("Location: index.php?controleur=controleurMain");
