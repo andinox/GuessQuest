@@ -122,6 +122,18 @@
     background-color: #00dd00;
 }
 
+#startBtnStartQuiz:hover {
+    cursor: pointer;
+    transform: scale(110%);
+    transition: transform 100ms;
+}
+
 #exitBtnStartQuiz {
     background-color: #e00000;
+}
+
+#exitBtnStartQuiz:hover {
+    cursor: pointer;
+    transform: scale(110%);
+    transition: transform 100ms;
 }

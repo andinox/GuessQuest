@@ -39,7 +39,12 @@ class controleurQuiz {
 
             //Récupération du score sur ce quiz
             $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
-            $score .= "/". count($tabTxtQuestions);
+            if($score !== 0){
+                $txtScore = $score->get("score");
+                $txtScore .= "/". count($tabTxtQuestions);
+            }else{
+                $txtScore = $score."/".count($tabTxtQuestions);;
+            }
         } else{
             $imgUser = "./img/profil.png";
         }
@@ -66,9 +71,24 @@ class controleurQuiz {
             $idQuiz = 1;
         }
 
+        $pseudo = $_SESSION["pseudo"];
+
         //Récupération du quiz par l'id
         $quiz = Quiz::getQuizById($idQuiz);
         $titreQuiz = $quiz->get("titreQuiz");
+        $titre = $titreQuiz;
+        $couleurHex = $quiz->get("couleur");
+
+        // Supprime le caractère # s'il est présent
+        $hex = str_replace('#', '', $couleurHex);
+
+        // Extraire les valeurs de rouge, vert et bleu de la chaîne hexadécimale
+        $red = hexdec(substr($hex, 0, 2));
+        $green = hexdec(substr($hex, 2, 2));
+        $blue = hexdec(substr($hex, 4, 2));
+
+        // Retourne les valeurs RGB sous forme de tableau
+        $couleurHex = "background-color: rgb($red, $green, $blue)";
 
         include("./vue/debut.php");
         include("./vue/Quiz/quiz.php");
@@ -109,7 +129,12 @@ class controleurQuiz {
 
             //Récupération du score sur ce quiz
             $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
-            $score .= "/". count($tabTxtQuestions);
+            if($score !== 0){
+                $txtScore = $score->get("score");
+                $txtScore .= "/". count($tabTxtQuestions);
+            }else{
+                $txtScore = $score."/".count($tabTxtQuestions);;
+            }
         } else{
             $imgUser = "./img/profil.png";
         }

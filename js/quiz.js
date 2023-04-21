@@ -1,4 +1,6 @@
 var titreQuiz;
+var idQuiz;
+var pseudo;
 var idQuizVal;
 var score = 0;
 var questionIndex = 0;
@@ -19,7 +21,8 @@ $(document).ready(function() {
 
 
 preStartQuiz = () => {
-    var idQuiz = $("#idQuiz");
+    idQuiz = $("#idQuiz");
+    pseudo = $("#pseudoQuiz");
     idQuizVal = idQuiz.text();
 
     //Transmettre l'idQuiz par la méthode $_GET dans l'api
@@ -87,9 +90,15 @@ addEcouteurBtn = (questions) => {
 
         setTimeout(() => {
             $(this).removeClass(classAdd);
-            // Si il n'y a plus de question on va à la page de fin de quiz   
+            // Si il n'y a plus de question on va à la page de fin de quiz et MAJ du score de l'utilisateur
             if(questionIndex >= questions.length){
+                //Transmettre le score par la méthode $_GET dans l'api
+                const url ="./api/updateScore.php?scoreQuiz="+encodeURIComponent(score)+"&idQuiz="+encodeURIComponent(idQuiz)+"&pseudo="+encodeURIComponent(pseudo);
+                // Envoie de l'URL 
+                fetch(url)
+
                 window.location.href = "index.php?controleur=controleurQuiz&action=afficheEndQuiz";
+
             }else {
                 //Suppression des button pour les re-construire dans la question suivante
                 $("#sectionReponseQuiz .btn-reponse").remove();

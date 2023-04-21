@@ -14,7 +14,7 @@
                 </div>
                 <div id="scoreJoueur">
                     <h2 class="lblJoueurScore">Votre score : </h2>
-                    <?php if(!empty($score)){echo "<p id='score-question'>".$score."</p>";}; ?>
+                    <?php echo "<p id='score-question'>".$txtScore."</p>"; ?>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     listeReportBtn.appendChild(t);
     listeReportBtn.addEventListener('click',function(){
-        window.location.href = 'http://localhost/index.php?controleur=controleurAdminListeReport&action=lireSignalements'
+        window.location.href = 'index.php?controleur=controleurAdminListeReport&action=lireSignalements'
     })
 
     // Ajouter la classe "report-btn" au bouton

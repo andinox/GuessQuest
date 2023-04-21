@@ -14,15 +14,20 @@ class Score extends Model{
         $req->setFetchMode(PDO::FETCH_CLASS, 'Score');
         $req->execute(array(':id_Quiz' => $id_Quiz));
         $tab = $req->fetchAll();
-        return $tab;
+        return $tab[0];
     }
 
     public static function getScoreByIdQuizAndUser($id_Quiz, $id_Utilisateur){
-        $sql = "SELECT score FROM Scores WHERE id_Quiz = :id_Quiz && id_Utilisateur = :id_Utilisateur";
+        $sql = "SELECT * FROM Scores WHERE id_Quiz = :id_Quiz && id_Utilisateur = :id_Utilisateur";
         $req = Connexion::pdo()->prepare($sql);
+        $req->setFetchMode(PDO::FETCH_CLASS, 'Score');
         $req->execute(array(':id_Quiz' => $id_Quiz, ':id_Utilisateur' => $id_Utilisateur));
         $tab = $req->fetchAll();
-        return $tab[0][0];
+        if($tab == null){
+            return 0;
+        }else {
+            return $tab[0];
+        }
     }
 
     public static function setScoreByIdQuizAndUser($id_Quiz, $id_Utilisateur, $score){

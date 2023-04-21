@@ -1,8 +1,9 @@
 <section id="mainContainerQuiz">
     <div id="containerQuizInfo">
-        <div id="info-quiz">
-            <p id="titreQuiz"> <?php echo $titreQuiz; ?></p>
+        <div id="info-quiz" style="<?php echo $couleurHex?>">
+            <h1 id="titreQuiz"> <?php echo $titreQuiz; ?></h1>
             <p id="idQuiz"> <?php echo $idQuiz; ?></p>
+            <p id="pseudoQuiz"> <?php echo $pseudo; ?></p>
         </div>
     </div>
     <div id="containerQuiz">

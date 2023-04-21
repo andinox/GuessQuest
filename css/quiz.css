@@ -2,6 +2,10 @@
     display: none;
 }
 
+#pseudoQuiz{
+    display: none;
+}
+
 #mainContainerQuiz{
     font-family: Raleway;
 }
@@ -20,6 +24,10 @@
     background-color: #ffffff;
     border-radius: 15px;
     text-align: center;
+}
+
+#titreQuiz{
+    font-size: 3rem;
 }
 
 #containerQuiz {
@@ -58,6 +66,8 @@
 }
 
 .btn-reponse{
+    font-size: 1.2rem;
+    font-family: Raleway;
     text-align: center;
     background-color: #ffffff;
     height: 15vh;
@@ -65,6 +75,12 @@
     border-radius: 15px;
     border: none;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+}
+
+.btn-reponse:hover{
+    transform: scale(105%);
+    transition: all 0.2s;
+    font-weight: bold;
 }
 
 .correct{

@@ -110,6 +110,18 @@
     background-color: #dda900;
 }
 
+#scoreBtnEndQuiz:hover {
+    cursor: pointer;
+    transform: scale(110%);
+    transition: transform 100ms;
+}
+
 #exitBtnEndQuiz {
     background-color: #e00000;
+}
+
+#exitBtnEndQuiz:hover {
+    cursor: pointer;
+    transform: scale(110%);
+    transition: transform 100ms;
 }
