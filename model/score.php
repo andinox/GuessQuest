@@ -31,6 +31,13 @@ class Score extends Model{
         $req->execute(array(':id_Quiz' => $id_Quiz, ':id_Utilisateur' => $id_Utilisateur, ':score' => $score));
     }
 
+    public static function getScoresById_Utilisateur($id_Utilisateur){
+        $sql = "SELECT * FROM Scores WHERE id_Utilisateur = :id_Utilisateur";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':id_Utilisateur' => $id_Utilisateur));
+        $tab = $req->fetchAll();
+        return $tab;
+    }
 }
 
 ?>

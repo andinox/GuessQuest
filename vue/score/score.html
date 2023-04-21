@@ -1,0 +1,29 @@
+<div id="particles-js"></div>
+<div id="containerScore">
+    <img id="imgProfil" class="profil-img" src="<?php echo $imgData; ?>"/>
+        <section id="mainScore">  
+            <h1 id="pseudoProfil"><?php echo $pseudo ?></h1>
+            
+                <table class="tableScore">
+                    <caption class="scores">Les scores</caption>
+                    <thead>
+                        <tr>
+                            <td class="tHeadItemsScore1"><b>Quiz</b></td>
+                            <td class="tHeadItemsScore2"><b>Score</b></td>    
+                        </tr>
+                    </thead>
+                    <tbody>     
+                        <?php
+                            foreach($tabAff as $ligne) {
+                                echo $ligne;
+                            }
+                        ?> 
+                    </tbody>    
+                 </table> 
+        </section>
+    
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/profil.js"></script>
+<script src="./assets/particles.js"></script>
+<script src="./assets/app.js"></script>
