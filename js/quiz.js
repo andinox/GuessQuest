@@ -8,12 +8,15 @@ var tabQuestionReponse;
 var txtQuestion;
 var btnReponse;
 var reponseCorrect;
+var progressBar;
 
 
 
 $(document).ready(function() {
     titreQuiz = $("#titreQuiz");
     txtQuestion = $("#txtQuestion");
+    progressBar = $("#progressBar");
+    progressBar.attr('data-progress', 0+"%")
     preStartQuiz();
 });
 
@@ -47,9 +50,6 @@ preStartQuiz = () => {
 
 
 newQuestion = (questions) => {
-
-    console.log(questions)
-    console.log(questionIndex)
 
     // La question actuelle 
     var question = questions[questionIndex];
@@ -100,6 +100,11 @@ addEcouteurBtn = (questions) => {
                 window.location.href = "index.php?controleur=controleurQuiz&action=afficheEndQuiz";
 
             }else {
+                // On augment la progress bar 
+                let pourcentage = (questionIndex/questions.length)*100;
+                pourcentageArrondi = Math.round(pourcentage);
+                progressBar.attr('data-progess', pourcentageArrondi+"%");
+
                 //Suppression des button pour les re-construire dans la question suivante
                 $("#sectionReponseQuiz .btn-reponse").remove();
                 //Lancer la nouvelle question

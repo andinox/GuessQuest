@@ -16,8 +16,12 @@ if (isset($_GET["idQuiz"]) && isset($_GET["pseudo"]) && isset($_GET["score"])){
 
     $id_Utilisateur = Utilisateur::getId_UtilisateurByPseudo($pseudo);
 
+    if(Score::getScoreByIdQuizAndUser($id_Quiz, $id_Utilisateur) !== null){
+        $sql = "UPDATE scores SET score = :score WHERE id_Utilisateur = :id_Utilisateur && id_Quiz = :id_Quiz;";
+    }else{
+        $sql = "INSERT INTO scores (score, id_Quiz, id_Utilisateur) VALUES (:score, :id_Quiz, :id_Utilisateur);";
+    }
     // On met à jour le score dans la BD
-    $sql = "INSERT INTO scores (id_Utilisateur, id_Quiz, score) VALUES (:id_Utilisateur, :id_Quiz, :score) ON DUPLICATE KEY UPDATE score = :score;";
     $req = Connexion::pdo()->prepare($sql);
     $req->execute(array(':id_Quiz' => $id_Quiz, ':id_Utilisateur' => $id_Utilisateur, ':score' => $score));
 }

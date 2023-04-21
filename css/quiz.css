@@ -1,3 +1,8 @@
+:root{
+    /*Initialisation de la variable pour la progressBar*/
+    --progress: 0%
+}
+
 #idQuiz{
     display: none;
 }
@@ -19,11 +24,15 @@
 }
 
 #info-quiz{
+    display: flex;
     width: 90vw;
     height: 100%;
     background-color: #ffffff;
     border-radius: 15px;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #titreQuiz{
@@ -89,4 +98,28 @@
 
 .incorrect{
     background: linear-gradient(32deg, rgba(230,29,29)0%, rgba(224,11,11)100%);
+}
+
+#progressBar{
+    z-index: 1;
+    color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    width: 220px;
+    height: 35px;
+    border: 2px solid rgb(255, 0, 234);
+}
+#progressBar::after{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: var(--progress);
+    height: 100%;
+    background-color: rgb(255, 0, 234);
+    content: attr(data-progress);
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
 }

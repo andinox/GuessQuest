@@ -4,6 +4,7 @@
             <h1 id="titreQuiz"> <?php echo $titreQuiz; ?></h1>
             <p id="idQuiz"> <?php echo $idQuiz; ?></p>
             <p id="pseudoQuiz"> <?php echo $pseudo; ?></p>
+            <div id="progressBar" data-progress="0%"></div>
         </div>
     </div>
     <div id="containerQuiz">
