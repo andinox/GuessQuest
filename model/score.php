@@ -22,6 +22,9 @@ class Score extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_Quiz' => $id_Quiz, ':id_Utilisateur' => $id_Utilisateur));
         $tab = $req->fetchAll();
+        if($tab == null){
+            return null;
+        }
         return $tab[0][0];
     }
 

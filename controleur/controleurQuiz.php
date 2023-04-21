@@ -34,9 +34,11 @@ class controleurQuiz {
         if($_SESSION["TypeOfConn"] == "compte"){
             $u = Utilisateur::getUtilisateurByPseudo($pseudo);
             $idUser = $u->get("id_Utilisateur");
-            $imgUser = $u->get("image");
-            $imgUser = "data:image/png;base64," . base64_encode($imgUser);
-
+            $pp = $u->get("image");
+            // $imgUser = "data:image/png;base64,". $pp;
+            // Echanger ces 2 lignes si vous voyez la photo de profil bugué
+            $imgUser = "data:image/png;base64,". base64_encode($pp);
+                
             //Récupération du score sur ce quiz
             $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
             $score .= "/". count($tabTxtQuestions);
@@ -46,7 +48,10 @@ class controleurQuiz {
         
         //Récupération des informations sur le quiz
         $imgQuiz = $quiz->get("image");
-        $imgData = "data:image/png;base64," . base64_encode($imgQuiz);
+        // $imgData = "data:image/png;base64,". $imgQuiz;
+        // Echanger ces 2 lignes si vous voyez la photo de profil bugué
+        $imgData = "data:image/png;base64,". base64_encode($imgQuiz);
+
         $couleurQuiz = $quiz->get("couleur");
 
         include("./vue/debut.php");
@@ -104,8 +109,10 @@ class controleurQuiz {
         if($_SESSION["TypeOfConn"] == "compte"){
             $u = Utilisateur::getUtilisateurByPseudo($pseudo);
             $idUser = $u->get("id_Utilisateur");
-            $imgUser = $u->get("image");
-            $imgUser = "data:image/png;base64," . base64_encode($imgUser);
+            $pp = $u->get("image");
+            // $imgUser = "data:image/png;base64,". $pp;
+            // Echanger ces 2 lignes si vous voyez la photo de profil bugué
+            $imgUser = "data:image/png;base64,". base64_encode($pp);
 
             //Récupération du score sur ce quiz
             $score = Score::getScoreByIdQuizAndUser($idQuiz,$idUser);
@@ -116,7 +123,9 @@ class controleurQuiz {
         
         //Récupération des informations sur le quiz
         $imgQuiz = $quiz->get("image");
-        $imgData = "data:image/png;base64," . base64_encode($imgQuiz);
+        // $imgData = "data:image/png;base64,". $imgQuiz;
+        // Echanger ces 2 lignes si vous voyez la photo de profil bugué
+        $imgData = "data:image/png;base64,". base64_encode($imgQuiz);
         $couleurQuiz = $quiz->get("couleur");
 
         include("./vue/debut.php");
