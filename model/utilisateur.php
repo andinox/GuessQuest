@@ -93,7 +93,6 @@ class Utilisateur extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':id_utilisateur' => $id_utilisateur, ':Date' => date("Y-m-d")));
         $id_quiz = Connexion::pdo()->lastInsertId();
-
         return $id_quiz;
     }
 
